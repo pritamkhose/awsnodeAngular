@@ -1,0 +1,86 @@
+Your environment has been set up for using Node.js 8.11.2 (x64) and npm.
+
+C:\Users\Pritam>E:
+
+E:\>cd E:\Code\Java\NodeJS\AWS
+
+E:\Code\Java\NodeJS\AWS>npm install -g @angular/cli@latest
+C:\Users\Pritam\AppData\Roaming\npm\ng -> C:\Users\Pritam\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng
++ @angular/cli@7.3.8
+updated 1 package in 83.494s
+
+E:\Code\Java\NodeJS\AWS>ng new awsnodeAngular
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS
+CREATE awsnodeAngular/angular.json (3879 bytes)
+CREATE awsnodeAngular/package.json (1314 bytes)
+CREATE awsnodeAngular/README.md (1031 bytes)
+CREATE awsnodeAngular/tsconfig.json (435 bytes)
+CREATE awsnodeAngular/tslint.json (1621 bytes)
+CREATE awsnodeAngular/.editorconfig (246 bytes)
+CREATE awsnodeAngular/.gitignore (629 bytes)
+CREATE awsnodeAngular/src/favicon.ico (5430 bytes)
+CREATE awsnodeAngular/src/index.html (301 bytes)
+CREATE awsnodeAngular/src/main.ts (372 bytes)
+CREATE awsnodeAngular/src/polyfills.ts (2841 bytes)
+CREATE awsnodeAngular/src/styles.css (80 bytes)
+CREATE awsnodeAngular/src/test.ts (642 bytes)
+CREATE awsnodeAngular/src/browserslist (388 bytes)
+CREATE awsnodeAngular/src/karma.conf.js (1027 bytes)
+CREATE awsnodeAngular/src/tsconfig.app.json (166 bytes)
+CREATE awsnodeAngular/src/tsconfig.spec.json (256 bytes)
+CREATE awsnodeAngular/src/tslint.json (244 bytes)
+CREATE awsnodeAngular/src/assets/.gitkeep (0 bytes)
+CREATE awsnodeAngular/src/environments/environment.prod.ts (51 bytes)
+CREATE awsnodeAngular/src/environments/environment.ts (662 bytes)
+CREATE awsnodeAngular/src/app/app-routing.module.ts (245 bytes)
+CREATE awsnodeAngular/src/app/app.module.ts (393 bytes)
+CREATE awsnodeAngular/src/app/app.component.html (1152 bytes)
+CREATE awsnodeAngular/src/app/app.component.spec.ts (1119 bytes)
+CREATE awsnodeAngular/src/app/app.component.ts (218 bytes)
+CREATE awsnodeAngular/src/app/app.component.css (0 bytes)
+CREATE awsnodeAngular/e2e/protractor.conf.js (752 bytes)
+CREATE awsnodeAngular/e2e/tsconfig.e2e.json (213 bytes)
+CREATE awsnodeAngular/e2e/src/app.e2e-spec.ts (643 bytes)
+CREATE awsnodeAngular/e2e/src/app.po.ts (251 bytes)
+Terminate batch job (Y/N)? n
+
+E:\Code\Java\NodeJS\AWS>cd awsnodeAngular
+
+E:\Code\Java\NodeJS\AWS\awsnodeAngular>npm install
+
+> node-sass@4.11.0 install E:\Code\Java\NodeJS\AWS\awsnodeAngular\node_modules\node-sass
+> node scripts/install.js
+
+Cached binary found at C:\Users\Pritam\AppData\Roaming\npm-cache\node-sass\4.11.0\win32-x64-57_binding.node
+
+> node-sass@4.11.0 postinstall E:\Code\Java\NodeJS\AWS\awsnodeAngular\node_modules\node-sass
+> node scripts/build.js
+
+Binary found at E:\Code\Java\NodeJS\AWS\awsnodeAngular\node_modules\node-sass\vendor\win32-x64-57\binding.node
+Testing binary
+Binary is fine
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.8 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.8: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+added 1086 packages from 1026 contributors and audited 42611 packages in 331.214s
+found 1 high severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+E:\Code\Java\NodeJS\AWS\awsnodeAngular>ng serve
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+Date: 2019-04-28T17:12:57.991Z
+Hash: 0f42ab45b70cfc7292aa
+Time: 16482ms
+chunk {es2015-polyfills} es2015-polyfills.js, es2015-polyfills.js.map (es2015-polyfills) 284 kB [initial] [rendered]
+chunk {main} main.js, main.js.map (main) 11.6 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 236 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 6.08 kB [entry] [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 16.3 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 3.77 MB [initial] [rendered]
+i ｢wdm｣: Compiled successfully.
+^CTerminate batch job (Y/N)? y
+
+E:\Code\Java\NodeJS\AWS\awsnodeAngular>
