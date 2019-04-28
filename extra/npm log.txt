@@ -125,3 +125,38 @@ found 1 high severity vulnerability
   run `npm audit fix` to fix them, or `npm audit` for details
 
 E:\Code\Java\NodeJS\AWS\awsnodeAngular>
+Microsoft Windows [Version 10.0.17134.706]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+E:\Code\Java\NodeJS\AWS\awsnodeAngular>npm install express path --save
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.8 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.8: wanted {"os":"darwin","arch":"any"} (current:
+{"os":"win32","arch":"x64"})
+
++ express@4.16.4
++ path@0.12.7
+added 2 packages from 1 contributor, updated 1 package and audited 51277 packages in 49.066s
+found 1 high severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+E:\Code\Java\NodeJS\AWS\awsnodeAngular>npm install postinstall --save
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.8 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.8: wanted {"os":"darwin","arch":"any"} (current:
+{"os":"win32","arch":"x64"})
+
++ postinstall@0.4.2
+added 5 packages from 3 contributors and audited 51301 packages in 19.751s
+found 1 high severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+E:\Code\Java\NodeJS\AWS\awsnodeAngular>npm i npm-preinstall
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.8 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.8: wanted {"os":"darwin","arch":"any"} (current:
+{"os":"win32","arch":"x64"})
+
++ npm-preinstall@2.0.0
+added 13 packages from 15 contributors and audited 51334 packages in 24.851s
+found 1 high severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+E:\Code\Java\NodeJS\AWS\awsnodeAngular>
