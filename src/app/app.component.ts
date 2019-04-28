@@ -9,7 +9,7 @@ import { SwUpdate } from '@angular/service-worker';
 export class AppComponent {
   title = 'awsnodeAngular';
 
-  constructor ( updates: SwUpdate) {
+  constructor( updates: SwUpdate) {
     console.log('update app Logic -->');
     updates.available.subscribe( event => {
       updates.activateUpdate().then(() => document.location.reload());

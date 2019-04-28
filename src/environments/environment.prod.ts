@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  database: 'nodeMongo',
+  aBaseUrl: 'https://angular-node-all.herokuapp.com/'
 };

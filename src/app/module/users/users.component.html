@@ -1,0 +1,35 @@
+<div class="button-row">
+  	<button style="margin-left:20px; margin-bottom:10px;" 
+          class="btn btn-info"  
+           (click)="refresh()">
+          Refresh
+  </button>
+	<button style="margin-left:20px; margin-bottom:10px;" 
+          class="btn btn-primary"  
+           (click)="new()">
+          New
+  </button>
+</div>
+<div class="table-responsive">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="
+    let aObj of aList;
+    let i = index
+  " [attr.data-index]="i">
+				<td>{{i+1}}</td>
+				<!-- <td>{{aObj.name}}</td><td>{{aObj.email}}</td> -->
+				<td><a routerLink="/user/{{aObj._id}}">{{aObj.name}}</a></td>
+				<td><a routerLink="/user/{{aObj._id}}">{{aObj.email}}</a></td>
+
+			</tr>
+		</tbody>
+	</table>
+</div>
