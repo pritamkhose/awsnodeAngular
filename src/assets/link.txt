@@ -16,3 +16,13 @@ https://github.com/pritamkhose/angular-channel-selection/blob/master/src/app/com
 https://github.com/swimlane/ngx-graph
 
 https://canvasjs.com/javascript-charts/pie-chart-custom-radius/
+
+--------------------------------------------------------------------------------------
+
+https://medium.com/@balramchavan/detecting-internet-connection-status-in-angular-application-ng-connection-service-1fa8add3b975
+
+npm i ng-connection-service
+
+--------------------------------------------------------------------------------------
+
+

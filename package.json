@@ -31,6 +31,7 @@
     "@angular/service-worker": "~7.2.0",
     "core-js": "^2.5.4",
     "express": "^4.16.4",
+    "ng-connection-service": "^1.0.4",
     "npm-preinstall": "^2.0.0",
     "path": "^0.12.7",
     "postinstall": "^0.4.2",

@@ -22,6 +22,7 @@ import { OrdersComponent } from './module/orders/orders.component';
 import { ProductEditComponent } from './module/product/product-edit/product-edit.component';
 import { UserEditComponent } from './module/users/user-edit/user-edit.component';
 import { LoginComponent } from './module/login/login.component';
+import { ReportsComponent } from './module/reports/reports.component';
 
 // import { CustomerComponent } from './customer/customer.component';
 // import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
@@ -43,7 +44,8 @@ import { ProductService } from './module/product/product.service';
     OrdersComponent,
     ProductEditComponent,
     UserEditComponent,
-    LoginComponent
+    LoginComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,

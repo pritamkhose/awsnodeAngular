@@ -1,6 +1,8 @@
-<br/>
 <div>
   <app-nav></app-nav>
   <br/> <br/> <br/>
+  <div *ngIf="isConnected == false">
+    <h4>You are offline !</h4>
+  </div>
 	<router-outlet></router-outlet>
 </div>

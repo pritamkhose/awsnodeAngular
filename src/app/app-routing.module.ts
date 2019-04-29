@@ -10,13 +10,14 @@ import { OrdersComponent } from './module/orders/orders.component';
 import { ProductEditComponent } from './module/product/product-edit/product-edit.component';
 import { UserEditComponent } from './module/users/user-edit/user-edit.component';
 import { LoginComponent } from './module/login/login.component';
+import { ReportsComponent } from './module/reports/reports.component';
 
 // import { CustomerComponent } from './customer/customer.component';
 // import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
 
 const routes: Routes = [
  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  //{ path: '**', redirectTo: '/home', pathMatch: 'full' },
+  // { path: '**', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductComponent },
   { path: 'product/:id', component: ProductEditComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'notifications', component: NotificationComponent },
   { path: 'orders', component: OrdersComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'reports', component: ReportsComponent },
 
   // { path: 'customers', component: CustomerComponent },
   // { path: 'customer/:id', component: CustomerEditComponent },
