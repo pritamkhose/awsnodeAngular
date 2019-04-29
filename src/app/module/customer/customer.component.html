@@ -1,0 +1,31 @@
+<div class="button-row">
+	<button style="margin-left:20px; margin-bottom:10px;" 
+          class="btn btn-primary"  
+           (click)="new()">
+          New
+  </button>
+</div>
+<div class="table-responsive">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="
+    let customer of customerList;
+    let i = index
+  " [attr.data-index]="i">
+				<td>{{i+1}}</td>
+				<!-- <td>{{customer.name}}</td>
+        	<td>{{customer.email}}</td> -->
+				<td><a routerLink="/customer/{{customer.email}}">{{customer.name}}</a></td>
+				<td><a routerLink="/customer/{{customer.email}}">{{customer.email}}</a></td>
+
+			</tr>
+		</tbody>
+	</table>
+</div>

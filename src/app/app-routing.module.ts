@@ -12,8 +12,8 @@ import { UserEditComponent } from './module/users/user-edit/user-edit.component'
 import { LoginComponent } from './module/login/login.component';
 import { ReportsComponent } from './module/reports/reports.component';
 
-// import { CustomerComponent } from './customer/customer.component';
-// import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
+import { CustomerComponent } from './module/customer/customer.component';
+import { CustomerEditComponent } from './module/customer/customer-edit/customer-edit.component';
 
 const routes: Routes = [
  { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -30,9 +30,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'reports', component: ReportsComponent },
 
-  // { path: 'customers', component: CustomerComponent },
-  // { path: 'customer/:id', component: CustomerEditComponent },
-  // { path: 'customer', component: CustomerEditComponent },
+  { path: 'customers', component: CustomerComponent },
+  { path: 'customer/:id', component: CustomerEditComponent },
+  { path: 'customer', component: CustomerEditComponent },
 ];
 
 @NgModule({

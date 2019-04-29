@@ -24,18 +24,18 @@ import { UserEditComponent } from './module/users/user-edit/user-edit.component'
 import { LoginComponent } from './module/login/login.component';
 import { ReportsComponent } from './module/reports/reports.component';
 
-// import { CustomerComponent } from './customer/customer.component';
-// import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
+import { CustomerComponent } from './module/customer/customer.component';
+import { CustomerEditComponent } from './module/customer/customer-edit/customer-edit.component';
 
 import { UserService } from './module/users/user.service';
 import { ProductService } from './module/product/product.service';
-// import { CustomerService } from './customer/customer.service';
+import { CustomerService } from './module/customer/customer.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // CustomerComponent,
-    // CustomerEditComponent,
+    CustomerComponent,
+    CustomerEditComponent,
     HomeComponent,
     NavComponent,
     ProductComponent,
@@ -57,7 +57,7 @@ import { ProductService } from './module/product/product.service';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [ UserService, ProductService], // CustomerService,
+  providers: [ UserService, ProductService, CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

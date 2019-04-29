@@ -1,0 +1,73 @@
+<div class="button-row">
+  <button
+    style="margin-left:20px; margin-bottom:10px;"
+    class="btn btn-info"
+    (click)="list()"
+  >
+    List
+  </button>
+  <button
+    style="margin-left:20px; margin-bottom:10px;"
+    class="btn btn-primary"
+    (click)="new()"
+  >
+    New
+  </button>
+</div>
+<form
+  class="example-form"
+  [formGroup]="boardsForm"
+  (ngSubmit)="onFormSubmit(boardsForm.value)"
+>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Name"
+      formControlName="name"
+      [errorStateMatcher]="matcher"
+    />
+    <mat-error>
+      <span
+        *ngIf="!boardsForm.get('name').valid && boardsForm.get('name').touched"
+        >Please enter Name</span
+      >
+    </mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Email"
+      formControlName="email"
+      [errorStateMatcher]="matcher"
+    />
+    <mat-error>
+      <span
+        *ngIf="
+          !boardsForm.get('email').valid && boardsForm.get('email').touched
+        "
+        >Please enter email</span
+      >
+    </mat-error>
+  </mat-form-field>
+
+  <div class="button-row">
+    <!-- <button type="submit" [disabled]="!boardsForm.valid" mat-fab color="primary"><mat-icon>save</mat-icon></button> -->
+    <button
+      style="margin-left:20px; margin-bottom:10px;"
+      class="btn btn-info"
+      type="submit"
+      [disabled]="!boardsForm.valid"
+    >
+      Save
+    </button>
+    <button
+    style="margin-left:20px; margin-bottom:10px;"
+    class="btn btn-warning"
+    (click)="delete()"
+    [disabled]="!boardsForm.valid"
+  >
+    Delete
+  </button>
+  </div>
+</form>
