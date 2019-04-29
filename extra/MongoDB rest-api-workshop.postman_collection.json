@@ -1,0 +1,1130 @@
+{
+	"info": {
+		"_postman_id": "127febcc-f619-4154-b567-73df85ad75e8",
+		"name": "MongoDB rest-api-workshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer mongoDB",
+			"description": null,
+			"item": [
+				{
+					"name": "http://localhost:8080/RestAPI-customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": "http://localhost:8080/RestAPI-customers"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPI-customer?email=pritamkhose3@gmail.com",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/RestAPI-customer?email=pritamkhose3@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPI-customer"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "pritamkhose3@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPI-customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"pritamkhose@gmail.com\",\n\t\"name\" : \"pritam khose\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/RestAPI-customer?email=pritamkhose@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPI-customer"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "pritamkhose@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPI-customer?email=pritamkhose@gmail.com",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"pritamkhose@gmail.com\",\n    \"name\": \"pritamkumar khose\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/RestAPI-customer?email=pritamkhose@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPI-customer"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "pritamkhose@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPI-customer?email=ram@gmail.com",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/RestAPI-customer?email=ram@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPI-customer"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "ram@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product MySQL",
+			"description": null,
+			"item": [
+				{
+					"name": "http://localhost:8080/RestAPI-product?id=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/RestAPI-product?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPI-product"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPI-product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/javascript"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"name\": \"Nikita\",\n        \"descp\": \"Always Best \",\n        \"imgurl\": \"https://avatars1.githubusercontent.com/u/13750893?s=460&v=4\",\n        \"price\": 25\n}"
+						},
+						"url": "http://localhost:8080/RestAPI-product"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPI-products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": "http://localhost:8080/RestAPI-products"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPI-product?id=3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/RestAPI-product?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPI-product"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPI-product?id=3",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"id\": 3,\n        \"name\": \"Nikita\",\n        \"descp\": \"Always Best \",\n        \"imgurl\": \"https://avatars1.githubusercontent.com/u/13750893?s=460&v=4\",\n        \"price\": 50\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/RestAPI-product?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPI-product"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dyanmic MongoDB",
+			"description": null,
+			"item": [
+				{
+					"name": "try1",
+					"description": null,
+					"item": [
+						{
+							"name": "http://localhost:8080/RestAPIMongoDBAll?Database=mongoDB&Collection=try1&id=5c42cdbdaa1125479c9aa2ee",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c42cdbdaa1125479c9aa2ee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"RestAPIMongoDB"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "mongoDB"
+										},
+										{
+											"key": "Collection",
+											"value": "try1"
+										},
+										{
+											"key": "id",
+											"value": "5c42cdbdaa1125479c9aa2ee"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/RestAPIMongoDBAll?Database=mongoDB&Collection=try1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/RestAPIMongoDBAll?Database=mongoDB&Collection=try1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"RestAPIMongoDBAll"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "mongoDB"
+										},
+										{
+											"key": "Collection",
+											"value": "try1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c42cdbdaa1125479c9aa2ee",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5cb37983c513dd243cbdda03",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"RestAPIMongoDB"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "mongoDB"
+										},
+										{
+											"key": "Collection",
+											"value": "try1"
+										},
+										{
+											"key": "id",
+											"value": "5cb37983c513dd243cbdda03"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"username\": \"pritam\",\r\n\"password\": \"password\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"RestAPIMongoDB"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "mongoDB"
+										},
+										{
+											"key": "Collection",
+											"value": "try1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c364533c6c26541e8bf46bf",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"username\": \"pritam niku\",\r\n\t\"password\": \"password\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c364533c6c26541e8bf46bf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"RestAPIMongoDB"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "mongoDB"
+										},
+										{
+											"key": "Collection",
+											"value": "try1"
+										},
+										{
+											"key": "id",
+											"value": "5c364533c6c26541e8bf46bf"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/RestAPIMongoDBMany?Database=mongoDB&Collection=try1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"password\": \"password\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/RestAPIMongoDBSearch?Database=mongoDB&Collection=try1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"RestAPIMongoDBSearch"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "mongoDB"
+										},
+										{
+											"key": "Collection",
+											"value": "try1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/RestAPIMongoDBSearch?Database=mongoDB&Collection=try1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/RestAPIMongoDBSearch?Database=mongoDB&Collection=try1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"RestAPIMongoDBSearch"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "mongoDB"
+										},
+										{
+											"key": "Collection",
+											"value": "try1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "document",
+					"description": "",
+					"item": [
+						{
+							"name": "http://localhost:8080/RestAPIMongoDB-CreateCollection?Database=mongoDB&Collection=try123",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/RestAPIMongoDB-CreateCollection?Database=mongoDB&Collection=try123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"RestAPIMongoDB-CreateCollection"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "mongoDB"
+										},
+										{
+											"key": "Collection",
+											"value": "try123"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/RestAPIMongoDB-DropCollection?Database=mongoDB&Collection=try123",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/RestAPIMongoDB-DropCollection?Database=mongoDB&Collection=try123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"RestAPIMongoDB-DropCollection"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "mongoDB"
+										},
+										{
+											"key": "Collection",
+											"value": "try123"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8080/RestAPIMongoDB-CreateDatabase?Database=mongotry12",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8080/RestAPIMongoDB-CreateDatabase?Database=mongotry12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"RestAPIMongoDB-CreateDatabase"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "mongotry12"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "AdvSearch",
+					"description": null,
+					"item": [
+						{
+							"name": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"limit\" : 10,\n\t\"skip\" : 2\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8686",
+									"path": [
+										"RestAPIMongoDB-AdvSearch"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "nodeMongo"
+										},
+										{
+											"key": "Collection",
+											"value": "area_countries"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"search\": {\n\t\t\"id\" : 2\n\t},\n\t\"sort\": {\n\t\t\"id\" : 1\n\t}\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8686",
+									"path": [
+										"RestAPIMongoDB-AdvSearch"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "nodeMongo"
+										},
+										{
+											"key": "Collection",
+											"value": "area_countries"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8686",
+									"path": [
+										"RestAPIMongoDB-AdvSearch"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "nodeMongo"
+										},
+										{
+											"key": "Collection",
+											"value": "area_countries"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"projection\": {\n\t\t\"projection\": {\n\t\t\t\"id\": 1,\n\t\t\t\"_id\": 0,\n\t\t\t \"sortname\": 1\n\t\t}\n\t}\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8686",
+									"path": [
+										"RestAPIMongoDB-AdvSearch"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "nodeMongo"
+										},
+										{
+											"key": "Collection",
+											"value": "area_countries"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"search\" : {\n\t \"$text\": { \"$search\": \"In\" }  \n\t}\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8686",
+									"path": [
+										"RestAPIMongoDB-AdvSearch"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "nodeMongo"
+										},
+										{
+											"key": "Collection",
+											"value": "area_countries"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "area Adv-seach",
+					"description": null,
+					"item": [
+						{
+							"name": "https://angular-node-all.herokuapp.com/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_cities",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"projection\": {\n\t\t\"projection\": {\n\t\t\t\"id\": 1,\n\t\t\t\"_id\": 0,\n\t\t\t\"name\" : 1\n\t\t\t\n\t\t}\n\t},\n\t\"search\": {\n\t\t\"state_id\": 101\n\t},\n\t\"limit\" : 500\n}"
+								},
+								"url": {
+									"raw": "https://angular-node-all.herokuapp.com/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_cities",
+									"protocol": "https",
+									"host": [
+										"angular-node-all",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"RestAPIMongoDB-AdvSearch"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "nodeMongo"
+										},
+										{
+											"key": "Collection",
+											"value": "area_cities"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://angular-node-all.herokuapp.com/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"projection\": {\n\t\t\"projection\": {\n\t\t\t\"id\": 1,\n\t\t\t\"_id\": 0,\n\t\t\t \"name\": 1\n\t\t}\n\t}\n}"
+								},
+								"url": {
+									"raw": "https://angular-node-all.herokuapp.com/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+									"protocol": "https",
+									"host": [
+										"angular-node-all",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"RestAPIMongoDB-AdvSearch"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "nodeMongo"
+										},
+										{
+											"key": "Collection",
+											"value": "area_countries"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://angular-node-all.herokuapp.com/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_states",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"projection\": {\n\t\t\"projection\": {\n\t\t\t\"id\": 1,\n\t\t\t\"_id\": 0,\n\t\t\t\"name\" : 1\n\t\t\t\n\t\t}\n\t},\n\t\"search\": {\n\t\t\"country_id\": 101\n\t},\n\t\"limit\" : 500\n}"
+								},
+								"url": {
+									"raw": "https://angular-node-all.herokuapp.com/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_states",
+									"protocol": "https",
+									"host": [
+										"angular-node-all",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"RestAPIMongoDB-AdvSearch"
+									],
+									"query": [
+										{
+											"key": "Database",
+											"value": "nodeMongo"
+										},
+										{
+											"key": "Collection",
+											"value": "area_states"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "5df08e03-5896-47d0-839a-2a56c827e2fa",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "4e9f1162-bd01-43b5-8b6f-5bbea4d7b1dc",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "http://localhost:8080/RestAPIMongoDBAll?Database=aws&Collection=city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/RestAPIMongoDBAll?Database=aws&Collection=city",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPIMongoDBAll"
+							],
+							"query": [
+								{
+									"key": "Database",
+									"value": "aws"
+								},
+								{
+									"key": "Collection",
+									"value": "city"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPIMongoDBAll?Database=my_db&Collection=customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/RestAPIMongoDBAll?Database=my_db&Collection=customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPIMongoDBAll"
+							],
+							"query": [
+								{
+									"key": "Database",
+									"value": "my_db"
+								},
+								{
+									"key": "Collection",
+									"value": "customers"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=customers&id=5cb24912a13ba207d80fc93e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPIMongoDB"
+							],
+							"query": [
+								{
+									"key": "Database",
+									"value": "mongoDB"
+								},
+								{
+									"key": "Collection",
+									"value": "customers"
+								},
+								{
+									"key": "id",
+									"value": "5cb24912a13ba207d80fc93e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/RestAPIMongoDB-SearchSortLimit?Database=mongoDB&Collection=try1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"search\" : {\n\t\t\"password\": \"password\"\n\t},\n\t\"sort\" : {\n\t\t\"username\": -1\n\t},\n\t\"limit\" : 200\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/RestAPIMongoDB-SearchSortLimit?Database=mongoDB&Collection=try1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"RestAPIMongoDB-SearchSortLimit"
+							],
+							"query": [
+								{
+									"key": "Database",
+									"value": "mongoDB"
+								},
+								{
+									"key": "Collection",
+									"value": "try1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"limit\" : 10,\n\t\"skip\" : 2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"RestAPIMongoDB-AdvSearch"
+							],
+							"query": [
+								{
+									"key": "Database",
+									"value": "nodeMongo"
+								},
+								{
+									"key": "Collection",
+									"value": "area_countries"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

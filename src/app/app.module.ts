@@ -30,6 +30,7 @@ import { CustomerEditComponent } from './module/customer/customer-edit/customer-
 import { UserService } from './module/users/user.service';
 import { ProductService } from './module/product/product.service';
 import { CustomerService } from './module/customer/customer.service';
+import { OrderService } from './module/orders/order.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,12 @@ import { CustomerService } from './module/customer/customer.service';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [ UserService, ProductService, CustomerService],
+  providers: [
+    UserService,
+    ProductService,
+    CustomerService,
+    OrderService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

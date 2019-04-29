@@ -1,3 +1,47 @@
 <p>
-Orders Graphs here!
+Orders here!
 </p>
+<select
+    [(ngModel)]="filterCountry"
+    id="filterCountry"
+    value="1"
+    style="margin-left:20px; margin-bottom:10px;"
+    (click)="getState($event.target.value)"
+  >
+    <option value="" selected>Select Country</option>
+    <option
+      *ngFor="let obj of countryArr"
+      value="{{ obj.id }}"
+      >{{ obj.name }}</option
+    >
+</select>
+<br/>
+<select
+    [(ngModel)]="filterState"
+    id="filterState"
+    value="1"
+    style="margin-left:20px; margin-bottom:10px;"
+    (click)="getCity($event.target.value)"
+  >
+    <option value="" selected>Select State</option>
+    <option
+      *ngFor="let obj of stateArr"
+      value="{{ obj.id }}"
+      >{{ obj.name }}</option
+    >
+</select>
+<br/>
+<select
+    [(ngModel)]="filterCity"
+    id="filterCity"
+    value="1"
+    style="margin-left:20px; margin-bottom:10px;"
+  >
+    <option value="" selected>Select City</option>
+    <option
+      *ngFor="let obj of cityArr"
+      value="{{ obj.id }}"
+      >{{ obj.name }}</option
+    >
+</select>
+<br/>
