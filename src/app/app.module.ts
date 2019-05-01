@@ -31,6 +31,7 @@ import { UserService } from './module/users/user.service';
 import { ProductService } from './module/product/product.service';
 import { CustomerService } from './module/customer/customer.service';
 import { OrderService } from './module/orders/order.service';
+import { UploadFileService } from './module/orders/upload-file.service';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { OrderService } from './module/orders/order.service';
     UserService,
     ProductService,
     CustomerService,
-    OrderService
+    OrderService,
+    UploadFileService
   ],
   bootstrap: [AppComponent]
 })

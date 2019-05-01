@@ -1125,6 +1125,94 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "s3upload",
+			"description": null,
+			"item": [
+				{
+					"name": "http://localhost:8686/s3ListFile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": "http://localhost:8686/s3ListFile"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/s3uploadFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": "http://localhost:8686/s3uploadFile"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/s3DeleteFile?file=ram.sql",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8686/s3DeleteFile?file=AppStorage/13.JPG",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"s3DeleteFile"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "AppStorage/13.JPG"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/listBucket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": "http://localhost:8686/listBucket"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/createBucket?bucket=prem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8686/createBucket?bucket=prem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"createBucket"
+							],
+							"query": [
+								{
+									"key": "bucket",
+									"value": "prem"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

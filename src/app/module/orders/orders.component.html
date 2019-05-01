@@ -45,3 +45,33 @@ Orders here!
     >
 </select>
 <br/>
+
+<h4>
+  upload Files
+</h4>
+<div *ngIf="currentFileUpload" class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+    aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+    {{progress.percentage}}%</div>
+</div>
+
+<label class="btn btn-default">
+  <input type="file" (change)="selectFile($event)">
+</label>
+
+<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+
+<button class="btn btn-success" (click)="uploadlist()">List of files</button>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">List of Files</div>
+  <div *ngFor="let dfile of fileUploads | async; let i = index" [attr.data-index]="i">
+      <p>{{i+1}}. <a href="{{baseURL}}localstorage/downloadFile/{{dfile}}" target="_blank">{{dfile}}</a> </p>
+    </div>
+</div>
+
+<p>
+  src link - https://grokonez.com/java-integration/angular-6-upload-get-multipartfile-spring-boot-example
+
+  https://github.com/pritamkhose/spring-rest-angular/tree/master/src/app/upload
+</p>
