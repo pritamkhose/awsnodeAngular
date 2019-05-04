@@ -59,8 +59,7 @@ export class ProductEditComponent implements OnInit {
       // email: [null, Validators.required]
     });
 
-    if (this.router.snapshot.url.length == 2)
-     {
+    if (this.router.snapshot.url.length === 2) {
       this.isSaved = true;
       this.getData(this.router.snapshot.url[1].path);
     }
@@ -68,7 +67,7 @@ export class ProductEditComponent implements OnInit {
 
   updateTotalPrice() {
     if (this.price !== undefined) {
-      var d = this.discount;
+      let d = this.discount;
       if (d === undefined) {
         d = 0;
       }

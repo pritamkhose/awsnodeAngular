@@ -1,23 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpEvent, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
-// import { AppConstants } from '../../app/constants';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UploadFileService {
 
-  baseURL = 'http://ec2-13-233-244-150.ap-south-1.compute.amazonaws.com:8080/';
-
   constructor(private http: HttpClient) { }
 
   pushFileToStorage(file: File): Observable<HttpEvent<{}>> {
     const formdata: FormData = new FormData();
-
     formdata.append('file', file);
 
-    const req = new HttpRequest('POST', this.baseURL + 'localstorage/uploadFile', formdata, {
+    const req = new HttpRequest('POST', environment.aBaseUrl + 's3uploadFile', formdata, {
       reportProgress: true,
       responseType: 'json'
     });
@@ -25,11 +22,12 @@ export class UploadFileService {
     return this.http.request(req);
   }
 
-  // getFiles(): Observable<any> {
-  //   return this.http.get(AppConstants.baseURL + 'localstorage/listFiles');
-  // }
 
   getFiles() {
-    return this.http.get<[]>(this.baseURL + 'localstorage/listFiles');
+    return this.http.get<[]>(environment.aBaseUrl + 's3ListFile');
+  }
+
+  deleteFile(fname: string) {
+    return this.http.delete(environment.aBaseUrl + 's3DeleteFile?file=' + fname );
   }
 }

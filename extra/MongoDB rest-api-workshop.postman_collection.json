@@ -1145,7 +1145,16 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "",
+									"type": "file"
+								}
+							]
+						},
 						"url": "http://localhost:8686/s3uploadFile"
 					},
 					"response": []
@@ -1193,7 +1202,7 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://localhost:8686/createBucket?bucket=prem",
+							"raw": "http://localhost:8686/createBucket?bucket=pritam-angular1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1205,7 +1214,202 @@
 							"query": [
 								{
 									"key": "bucket",
-									"value": "prem"
+									"value": "pritam-angular1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/deleteBucket?bucket=pritam-angular1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8686/deleteBucket?bucket=pritam-angular1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"deleteBucket"
+							],
+							"query": [
+								{
+									"key": "bucket",
+									"value": "pritam-angular1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/localuploadFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": "http://localhost:8686/serverUploadFile"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/serverDeleteFile?file=uploads\\1556903651374_pritam.jpg",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8686/serverDeleteFile?file=uploads\\1556903655234_Honda.mp4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"serverDeleteFile"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "uploads\\1556903655234_Honda.mp4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/serverListFile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": "http://localhost:8686/serverListFile"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/serverCleanTrash",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": "http://localhost:8686/serverCleanTrash"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/serverGetFile?file=uploads\\\\11556946904370_pritam.jpg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8686/serverGetFile?file=uploads\\\\1556946904370_pritam.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"serverGetFile"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "uploads\\\\1556946904370_pritam.jpg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/serverGetFile?uploads\\\\1556948411306_Honda.mp4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8686/serverGetFile?file=uploads\\\\1556948411306_Honda.mp4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"serverGetFile"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "uploads\\\\1556948411306_Honda.mp4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/s3GetFile?file=AppStorage/016.JPG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8686/s3GetFile?file=AppStorage/016.JPG",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"s3GetFile"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "AppStorage/016.JPG"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/s3GetFile?file=1556905345675_pritam.jpg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8686/s3GetFile?file=1556905345675_pritam.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"s3GetFile"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "1556905345675_pritam.jpg"
 								}
 							]
 						}

@@ -1,7 +1,8 @@
-<p>
-Orders here!
-</p>
-<select
+<h4>
+  Address:
+</h4>
+<!--  <div>
+ <select
     [(ngModel)]="filterCountry"
     id="filterCountry"
     value="1"
@@ -9,14 +10,12 @@ Orders here!
     (click)="getState($event.target.value)"
   >
     <option value="" selected>Select Country</option>
-    <option
-      *ngFor="let obj of countryArr"
-      value="{{ obj.id }}"
-      >{{ obj.name }}</option
-    >
-</select>
-<br/>
-<select
+    <option *ngFor="let obj of countryArr" value="{{ obj.id }}">{{
+      obj.name
+    }}</option>
+  </select>
+  <br />
+  <select
     [(ngModel)]="filterState"
     id="filterState"
     value="1"
@@ -24,54 +23,152 @@ Orders here!
     (click)="getCity($event.target.value)"
   >
     <option value="" selected>Select State</option>
-    <option
-      *ngFor="let obj of stateArr"
-      value="{{ obj.id }}"
-      >{{ obj.name }}</option
-    >
-</select>
-<br/>
-<select
+    <option *ngFor="let obj of stateArr" value="{{ obj.id }}">{{
+      obj.name
+    }}</option>
+  </select>
+  <br />
+  <select
     [(ngModel)]="filterCity"
     id="filterCity"
     value="1"
     style="margin-left:20px; margin-bottom:10px;"
   >
     <option value="" selected>Select City</option>
+    <option *ngFor="let obj of cityArr" value="{{ obj.id }}">{{
+      obj.name
+    }}</option>
+  </select>
+</div>-->
+<div class="row">
+  <input
+    *ngIf="countryArr.length > 0"
+    list="countryArrList"
+    name="filterCountry"
+    [(ngModel)]="filterCountry"
+    id="filterCountry"
+    placeholder="Enter Country"
+    (change)="getState($event.target.value)"
+    style="margin-left:20px; margin-bottom:10px;"
+  />
+  <datalist id="countryArrList">
     <option
-      *ngFor="let obj of cityArr"
-      value="{{ obj.id }}"
+      *ngFor="let obj of countryArr"
+      id="{{ obj.id }}"
+      value="{{ obj.name }}"
       >{{ obj.name }}</option
     >
-</select>
-<br/>
+  </datalist>
+  <mat-option *ngIf="isCountryLoading" class="is-loading"
+    ><mat-spinner diameter="30"></mat-spinner
+  ></mat-option>
+</div>
+<br />
+<div class="row">
+  <input
+    *ngIf="stateArr.length > 0"
+    list="stateArrList"
+    name="filterState"
+    [(ngModel)]="filterState"
+    id="filterState"
+    placeholder="Enter State"
+    (change)="getCity($event.target.value)"
+    style="margin-left:20px; margin-bottom:10px;"
+  />
+  <datalist id="stateArrList">
+    <option *ngFor="let obj of stateArr" value="{{ obj.name }}">{{
+      obj.name
+    }}</option>
+  </datalist>
+  <mat-option *ngIf="isStateLoading" class="is-loading"
+    ><mat-spinner diameter="30"></mat-spinner
+  ></mat-option>
+</div>
+<br />
+<div class="row">
+  <input
+    *ngIf="cityArr.length > 0"
+    list="cityArrList"
+    name="filterCity"
+    [(ngModel)]="filterCity"
+    id="filterCity"
+    placeholder="Enter City"
+    style="margin-left:20px; margin-bottom:10px;"
+  />
+  <datalist id="cityArrList">
+    <option *ngFor="let obj of cityArr" value="{{ obj.name }}">{{
+      obj.name
+    }}</option>
+  </datalist>
+  <mat-option *ngIf="isCityLoading" class="is-loading"
+    ><mat-spinner diameter="30"></mat-spinner
+  ></mat-option>
+</div>
+<br />
+<br />
 
+<hr />
 <h4>
-  upload Files
+  Upload Files
 </h4>
 <div *ngIf="currentFileUpload" class="progress">
-  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
-    aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
-    {{progress.percentage}}%</div>
+  <div
+    class="progress-bar progress-bar-info progress-bar-striped"
+    role="progressbar"
+    attr.aria-valuenow="{{ progress.percentage }}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    [ngStyle]="{ width: progress.percentage + '%' }"
+  >
+    {{ progress.percentage }}%
+  </div>
 </div>
 
 <label class="btn btn-default">
-  <input type="file" (change)="selectFile($event)">
+  <input type="file" (change)="selectFile($event)" />
 </label>
 
-<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()"> Upload</button>
+<button class="btn btn-default btnmargin" (click)="uploadlist()">List of files</button>
 
-<button class="btn btn-success" (click)="uploadlist()">List of files</button>
-
+<hr />
 <div class="panel panel-primary">
-  <div class="panel-heading">List of Files</div>
-  <div *ngFor="let dfile of fileUploads | async; let i = index" [attr.data-index]="i">
-      <p>{{i+1}}. <a href="{{baseURL}}localstorage/downloadFile/{{dfile}}" target="_blank">{{dfile}}</a> </p>
-    </div>
+  <div class="panel-heading">List of S3 Files: </div>
+  <!-- <div
+    *ngFor="let dfile of fileUploads | async; let i = index"
+    [attr.data-index]="i">
+    <p>
+      {{ i + 1 }}.
+      <a href="{{ baseURL }}s3GetFile?file={{ dfile }}" target="_blank">{{
+        dfile
+      }}</a>
+    </p>
+  </div> -->
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>File Name</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let dfile of fileUploads | async; let i = index" [attr.data-index]="i">
+          <td>{{i+1}}</td>
+          <td><a href="{{ baseURL }}s3GetFile?file={{ dfile }}" target="_blank">{{dfile}}</a></td>
+          <td>
+            <button hidden class="btn btn-danger" (click)="deletefile(dfile)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 </div>
 
 <p>
-  src link - https://grokonez.com/java-integration/angular-6-upload-get-multipartfile-spring-boot-example
-
+  src link -
+  https://grokonez.com/java-integration/angular-6-upload-get-multipartfile-spring-boot-example
   https://github.com/pritamkhose/spring-rest-angular/tree/master/src/app/upload
 </p>
