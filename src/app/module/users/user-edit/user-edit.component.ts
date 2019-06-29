@@ -67,7 +67,7 @@ export class UserEditComponent implements OnInit {
         // if (err.status === 503) {
           alert('Invalid Data Found!');
         // } else {
-        //   alert('Something Went wring!');
+        //   alert('Something Went wrong!');
         // }
           this.directrouter.navigate(['/users']);
       }
@@ -92,7 +92,7 @@ export class UserEditComponent implements OnInit {
         },
         err => {
           console.error(JSON.stringify(err));
-          alert('Something Went wring!');
+          alert('Something Went wrong!');
           this.directrouter.navigate(['/user/', this.aObj._id]);
         }
       );
@@ -108,7 +108,7 @@ export class UserEditComponent implements OnInit {
           },
           err => {
             console.error(JSON.stringify(err));
-            alert('Something Went wring!');
+            alert('Something Went wrong!');
           }
         );
     } else {
@@ -124,7 +124,7 @@ export class UserEditComponent implements OnInit {
             alert('Duplicate Data Entry, Please provide new email');
           } else {
             console.error(JSON.stringify(err));
-            alert('Something Went wring!');
+            alert('Something Went wrong!');
           }
         }
       );

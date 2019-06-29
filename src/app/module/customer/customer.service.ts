@@ -25,7 +25,7 @@ export class CustomerService {
 
   constructor(private http: HttpClient) {}
 
-  private aBaseUrl = environment.database + 'RestAPI-';
+  private aBaseUrl = environment.aBaseUrl;
 
   public getCustomereList() {
     console.log('get List --> ' + this.aBaseUrl + 'customers');

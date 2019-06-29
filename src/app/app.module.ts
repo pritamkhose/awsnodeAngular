@@ -27,12 +27,17 @@ import { ReportsComponent } from './module/reports/reports.component';
 import { CustomerComponent } from './module/customer/customer.component';
 import { CustomerEditComponent } from './module/customer/customer-edit/customer-edit.component';
 
+import { DropboxComponent } from './module/dropbox/dropbox.component';
+import { DropboxService } from './module/dropbox/dropbox.service';
+
 import { UserService } from './module/users/user.service';
 import { ProductService } from './module/product/product.service';
 import { CustomerService } from './module/customer/customer.service';
 import { OrderService } from './module/orders/order.service';
 import { UploadFileService } from './module/orders/upload-file.service';
 import { FcmService } from './module/notification/fcm.service';
+
+
 
 @NgModule({
   declarations: [
@@ -48,7 +53,8 @@ import { FcmService } from './module/notification/fcm.service';
     ProductEditComponent,
     UserEditComponent,
     LoginComponent,
-    ReportsComponent
+    ReportsComponent,
+    DropboxComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +72,8 @@ import { FcmService } from './module/notification/fcm.service';
     CustomerService,
     OrderService,
     UploadFileService,
-    FcmService
+    FcmService,
+    DropboxService
   ],
   bootstrap: [AppComponent]
 })

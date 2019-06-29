@@ -15,6 +15,8 @@ import { ReportsComponent } from './module/reports/reports.component';
 import { CustomerComponent } from './module/customer/customer.component';
 import { CustomerEditComponent } from './module/customer/customer-edit/customer-edit.component';
 
+import { DropboxComponent } from './module/dropbox/dropbox.component';
+
 const routes: Routes = [
  { path: '', redirectTo: '/home', pathMatch: 'full' },
   // { path: '**', redirectTo: '/home', pathMatch: 'full' },
@@ -33,6 +35,8 @@ const routes: Routes = [
   { path: 'customers', component: CustomerComponent },
   { path: 'customer/:id', component: CustomerEditComponent },
   { path: 'customer', component: CustomerEditComponent },
+
+  { path: 'dropbox', component: DropboxComponent },
 ];
 
 @NgModule({

@@ -121,7 +121,7 @@ export class ProductEditComponent implements OnInit {
         },
         err => {
           console.error(JSON.stringify(err));
-          alert('Something Went wring!');
+          alert('Something Went wrong!');
           this.directrouter.navigate(['/product/', this.aObj._id]);
         }
       );
@@ -138,7 +138,7 @@ export class ProductEditComponent implements OnInit {
             },
             err => {
               console.error(JSON.stringify(err));
-              alert('Something Went wring!');
+              alert('Something Went wrong!');
             }
           );
       } else {
@@ -156,7 +156,7 @@ export class ProductEditComponent implements OnInit {
               alert('Duplicate Data Entry, Please provide new email');
             } else {
               console.error(JSON.stringify(err));
-              alert('Something Went wring!');
+              alert('Something Went wrong!');
             }
           }
          );
