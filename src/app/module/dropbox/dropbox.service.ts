@@ -17,6 +17,11 @@ export class DropboxService {
     return this.http.get(this.aBaseUrl + 'dropboxListFiles?folder=' + folderName);
   }
 
+  public fileDownload(filePath) {
+    // console.log('get File --> ' + this.aBaseUrl + 'dropboxDownload?fileName=' + filePath);
+    return this.http.get(this.aBaseUrl + 'dropboxDownload?fileName=' + filePath);
+  }
+
   public deleteFile(fileName) {
     // console.log('get drive File Delete --> ' + this.aBaseUrl + 'dropboxDelete?fileName=' + fileName);
     return this.http.delete(this.aBaseUrl + 'dropboxDelete?fileName=' + fileName);
