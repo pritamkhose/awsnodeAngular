@@ -19,7 +19,7 @@
 }
 
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
-    background-color: #286090;
+    background-color: #c3c8cc;
 }
 
 .navbar-inverse .navbar-toggle {
@@ -29,4 +29,17 @@
  /* new */
 .navbar-dark .navbar-toggler {
     border-color: whitesmoke
+}
+
+.dropdown-menu {
+  background-color: #17a2b8;
+  border: none;
+  margin-left: 25px;
+}
+
+.mydropdown {
+  align-content: center;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }

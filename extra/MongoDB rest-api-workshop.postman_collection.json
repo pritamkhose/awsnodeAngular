@@ -1,39 +1,36 @@
 {
 	"info": {
-		"_postman_id": "127febcc-f619-4154-b567-73df85ad75e8",
+		"_postman_id": "5dd38f51-a232-4037-b6ff-f131092216b3",
 		"name": "MongoDB rest-api-workshop",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "customer mongoDB",
-			"description": null,
 			"item": [
 				{
-					"name": "http://localhost:8080/RestAPI-customers",
+					"name": "http://localhost:8686/customers",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
-						"url": "http://localhost:8080/RestAPI-customers"
+						"url": "http://localhost:8686/customers"
 					},
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPI-customer?email=pritamkhose3@gmail.com",
+					"name": "http://localhost:8686/customer?email=pritamkhose3@gmail.com",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "http://localhost:8080/RestAPI-customer?email=pritamkhose3@gmail.com",
+							"raw": "http://localhost:8686/customer?email=pritamkhose3@gmail.com",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
-								"RestAPI-customer"
+								"customer"
 							],
 							"query": [
 								{
@@ -46,7 +43,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPI-customer",
+					"name": "http://localhost:8686/customer",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -60,14 +57,14 @@
 							"raw": "{\n\t\"email\" : \"pritamkhose@gmail.com\",\n\t\"name\" : \"pritam khose\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/RestAPI-customer?email=pritamkhose@gmail.com",
+							"raw": "http://localhost:8686/customer?email=pritamkhose@gmail.com",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
-								"RestAPI-customer"
+								"customer"
 							],
 							"query": [
 								{
@@ -80,7 +77,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPI-customer?email=pritamkhose@gmail.com",
+					"name": "http://localhost:8686/customer?email=pritamkhose@gmail.com",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -94,14 +91,14 @@
 							"raw": "{\n    \"email\": \"pritamkhose@gmail.com\",\n    \"name\": \"pritamkumar khose\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/RestAPI-customer?email=pritamkhose@gmail.com",
+							"raw": "http://localhost:8686/customer?email=pritamkhose@gmail.com",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
-								"RestAPI-customer"
+								"customer"
 							],
 							"query": [
 								{
@@ -114,20 +111,23 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPI-customer?email=ram@gmail.com",
+					"name": "http://localhost:8686/customer?email=ram@gmail.com",
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "http://localhost:8080/RestAPI-customer?email=ram@gmail.com",
+							"raw": "http://localhost:8686/customer?email=ram@gmail.com",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
-								"RestAPI-customer"
+								"customer"
 							],
 							"query": [
 								{
@@ -143,21 +143,19 @@
 		},
 		{
 			"name": "product MySQL",
-			"description": null,
 			"item": [
 				{
-					"name": "http://localhost:8080/RestAPI-product?id=1",
+					"name": "http://localhost:8686/RestAPI-product?id=1",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "http://localhost:8080/RestAPI-product?id=1",
+							"raw": "http://localhost:8686/RestAPI-product?id=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
 								"RestAPI-product"
 							],
@@ -172,7 +170,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPI-product",
+					"name": "http://localhost:8686/RestAPI-product",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -185,33 +183,35 @@
 							"mode": "raw",
 							"raw": " {\n        \"name\": \"Nikita\",\n        \"descp\": \"Always Best \",\n        \"imgurl\": \"https://avatars1.githubusercontent.com/u/13750893?s=460&v=4\",\n        \"price\": 25\n}"
 						},
-						"url": "http://localhost:8080/RestAPI-product"
+						"url": "http://localhost:8686/RestAPI-product"
 					},
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPI-products",
+					"name": "http://localhost:8686/RestAPI-products",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
-						"url": "http://localhost:8080/RestAPI-products"
+						"url": "http://localhost:8686/RestAPI-products"
 					},
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPI-product?id=3",
+					"name": "http://localhost:8686/RestAPI-product?id=3",
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "http://localhost:8080/RestAPI-product?id=3",
+							"raw": "http://localhost:8686/RestAPI-product?id=3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
 								"RestAPI-product"
 							],
@@ -226,7 +226,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPI-product?id=3",
+					"name": "http://localhost:8686/RestAPI-product?id=3",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -240,12 +240,12 @@
 							"raw": " {\n        \"id\": 3,\n        \"name\": \"Nikita\",\n        \"descp\": \"Always Best \",\n        \"imgurl\": \"https://avatars1.githubusercontent.com/u/13750893?s=460&v=4\",\n        \"price\": 50\n    }"
 						},
 						"url": {
-							"raw": "http://localhost:8080/RestAPI-product?id=3",
+							"raw": "http://localhost:8686/RestAPI-product?id=3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
 								"RestAPI-product"
 							],
@@ -263,25 +263,22 @@
 		},
 		{
 			"name": "dyanmic MongoDB",
-			"description": null,
 			"item": [
 				{
 					"name": "try1",
-					"description": null,
 					"item": [
 						{
-							"name": "http://localhost:8080/RestAPIMongoDBAll?Database=mongoDB&Collection=try1&id=5c42cdbdaa1125479c9aa2ee",
+							"name": "http://localhost:8686/RestAPIMongoDBAll?Database=mongoDB&Collection=try1&id=5c42cdbdaa1125479c9aa2ee",
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {},
 								"url": {
-									"raw": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c42cdbdaa1125479c9aa2ee",
+									"raw": "http://localhost:8686/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c42cdbdaa1125479c9aa2ee",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8686",
 									"path": [
 										"RestAPIMongoDB"
 									],
@@ -304,18 +301,17 @@
 							"response": []
 						},
 						{
-							"name": "http://localhost:8080/RestAPIMongoDBAll?Database=mongoDB&Collection=try1",
+							"name": "http://localhost:8686/RestAPIMongoDBAll?Database=mongoDB&Collection=try1",
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {},
 								"url": {
-									"raw": "http://localhost:8080/RestAPIMongoDBAll?Database=mongoDB&Collection=try1",
+									"raw": "http://localhost:8686/RestAPIMongoDBAll?Database=mongoDB&Collection=try1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8686",
 									"path": [
 										"RestAPIMongoDBAll"
 									],
@@ -334,18 +330,21 @@
 							"response": []
 						},
 						{
-							"name": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c42cdbdaa1125479c9aa2ee",
+							"name": "http://localhost:8686/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c42cdbdaa1125479c9aa2ee",
 							"request": {
 								"method": "DELETE",
 								"header": [],
-								"body": {},
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
-									"raw": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5cb37983c513dd243cbdda03",
+									"raw": "http://localhost:8686/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5cb37983c513dd243cbdda03",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8686",
 									"path": [
 										"RestAPIMongoDB"
 									],
@@ -368,7 +367,7 @@
 							"response": []
 						},
 						{
-							"name": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1",
+							"name": "http://localhost:8686/RestAPIMongoDB?Database=mongoDB&Collection=try1",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -382,12 +381,12 @@
 									"raw": "{\r\n\"username\": \"pritam\",\r\n\"password\": \"password\"\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1",
+									"raw": "http://localhost:8686/RestAPIMongoDB?Database=mongoDB&Collection=try1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8686",
 									"path": [
 										"RestAPIMongoDB"
 									],
@@ -406,7 +405,7 @@
 							"response": []
 						},
 						{
-							"name": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c364533c6c26541e8bf46bf",
+							"name": "http://localhost:8686/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c364533c6c26541e8bf46bf",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -420,12 +419,12 @@
 									"raw": "{\r\n\t\"username\": \"pritam niku\",\r\n\t\"password\": \"password\"\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c364533c6c26541e8bf46bf",
+									"raw": "http://localhost:8686/RestAPIMongoDB?Database=mongoDB&Collection=try1&id=5c364533c6c26541e8bf46bf",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8686",
 									"path": [
 										"RestAPIMongoDB"
 									],
@@ -448,7 +447,7 @@
 							"response": []
 						},
 						{
-							"name": "http://localhost:8080/RestAPIMongoDBMany?Database=mongoDB&Collection=try1",
+							"name": "http://localhost:8686/RestAPIMongoDBMany?Database=mongoDB&Collection=try1",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -462,12 +461,12 @@
 									"raw": "{\n\t\"password\": \"password\"\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/RestAPIMongoDBSearch?Database=mongoDB&Collection=try1",
+									"raw": "http://localhost:8686/RestAPIMongoDBSearch?Database=mongoDB&Collection=try1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8686",
 									"path": [
 										"RestAPIMongoDBSearch"
 									],
@@ -486,7 +485,7 @@
 							"response": []
 						},
 						{
-							"name": "http://localhost:8080/RestAPIMongoDBSearch?Database=mongoDB&Collection=try1",
+							"name": "http://localhost:8686/RestAPIMongoDBSearch?Database=mongoDB&Collection=try1",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -500,12 +499,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8080/RestAPIMongoDBSearch?Database=mongoDB&Collection=try1",
+									"raw": "http://localhost:8686/RestAPIMongoDBSearch?Database=mongoDB&Collection=try1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8686",
 									"path": [
 										"RestAPIMongoDBSearch"
 									],
@@ -528,21 +527,19 @@
 				},
 				{
 					"name": "document",
-					"description": "",
 					"item": [
 						{
-							"name": "http://localhost:8080/RestAPIMongoDB-CreateCollection?Database=mongoDB&Collection=try123",
+							"name": "http://localhost:8686/RestAPIMongoDB-CreateCollection?Database=mongoDB&Collection=try123",
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {},
 								"url": {
-									"raw": "http://localhost:8080/RestAPIMongoDB-CreateCollection?Database=mongoDB&Collection=try123",
+									"raw": "http://localhost:8686/RestAPIMongoDB-CreateCollection?Database=mongoDB&Collection=try123",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8686",
 									"path": [
 										"RestAPIMongoDB-CreateCollection"
 									],
@@ -561,18 +558,17 @@
 							"response": []
 						},
 						{
-							"name": "http://localhost:8080/RestAPIMongoDB-DropCollection?Database=mongoDB&Collection=try123",
+							"name": "http://localhost:8686/RestAPIMongoDB-DropCollection?Database=mongoDB&Collection=try123",
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {},
 								"url": {
-									"raw": "http://localhost:8080/RestAPIMongoDB-DropCollection?Database=mongoDB&Collection=try123",
+									"raw": "http://localhost:8686/RestAPIMongoDB-DropCollection?Database=mongoDB&Collection=try123",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8686",
 									"path": [
 										"RestAPIMongoDB-DropCollection"
 									],
@@ -591,18 +587,17 @@
 							"response": []
 						},
 						{
-							"name": "http://localhost:8080/RestAPIMongoDB-CreateDatabase?Database=mongotry12",
+							"name": "http://localhost:8686/RestAPIMongoDB-CreateDatabase?Database=mongotry12",
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {},
 								"url": {
-									"raw": "http://localhost:8080/RestAPIMongoDB-CreateDatabase?Database=mongotry12",
+									"raw": "http://localhost:8686/RestAPIMongoDB-CreateDatabase?Database=mongotry12",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8686",
 									"path": [
 										"RestAPIMongoDB-CreateDatabase"
 									],
@@ -621,7 +616,6 @@
 				},
 				{
 					"name": "AdvSearch",
-					"description": null,
 					"item": [
 						{
 							"name": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
@@ -704,7 +698,10 @@
 							"request": {
 								"method": "POST",
 								"header": [],
-								"body": {},
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "http://localhost:8686/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_countries",
 									"protocol": "http",
@@ -810,7 +807,6 @@
 				},
 				{
 					"name": "area Adv-seach",
-					"description": null,
 					"item": [
 						{
 							"name": "https://angular-node-all.herokuapp.com/RestAPIMongoDB-AdvSearch?Database=nodeMongo&Collection=area_cities",
@@ -955,29 +951,42 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "http://localhost:8080/RestAPIMongoDBAll?Database=aws&Collection=city",
+					"name": "http://localhost:8686/RestAPIMongoDBAll?Database=aws&Collection=city",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 348,\n        \"DistrictName\": \"Ahmednagar\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 349,\n        \"DistrictName\": \"Akola\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 350,\n        \"DistrictName\": \"Amravati\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 351,\n        \"DistrictName\": \"Aurangabad\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 352,\n        \"DistrictName\": \"Beed\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 353,\n        \"DistrictName\": \"Bhandara\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 354,\n        \"DistrictName\": \"Buldhana\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 355,\n        \"DistrictName\": \"Chandrapur\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 356,\n        \"DistrictName\": \"Dhule\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 357,\n        \"DistrictName\": \"Gadchiroli\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 358,\n        \"DistrictName\": \"Gondia\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 359,\n        \"DistrictName\": \"Hingoli\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 360,\n        \"DistrictName\": \"Jalgaon\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 361,\n        \"DistrictName\": \"Jalna\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 362,\n        \"DistrictName\": \"Kolhapur\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 363,\n        \"DistrictName\": \"Latur\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 364,\n        \"DistrictName\": \"Mumbai City\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 365,\n        \"DistrictName\": \"Mumbai Suburban\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 366,\n        \"DistrictName\": \"Nagpur\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 367,\n        \"DistrictName\": \"Nanded\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 368,\n        \"DistrictName\": \"Nandurbar\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 369,\n        \"DistrictName\": \"Nashik\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 370,\n        \"DistrictName\": \"Osmanabad\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 371,\n        \"DistrictName\": \"Parbhani\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 372,\n        \"DistrictName\": \"Pune\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 373,\n        \"DistrictName\": \"Raigad\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 374,\n        \"DistrictName\": \"Ratnagiri\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 375,\n        \"DistrictName\": \"Sangli\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 376,\n        \"DistrictName\": \"Satara\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 377,\n        \"DistrictName\": \"Sindhudurg\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 378,\n        \"DistrictName\": \"Solapur\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 379,\n        \"DistrictName\": \"Thane\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 380,\n        \"DistrictName\": \"Wardha\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 381,\n        \"DistrictName\": \"Washim\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 382,\n        \"DistrictName\": \"Yavatmal\"\n    }\n]"
+						},
 						"url": {
-							"raw": "http://localhost:8080/RestAPIMongoDBAll?Database=aws&Collection=city",
+							"raw": "http://localhost:8686/RestAPIMongoDBAll?Database=nodeMongo&Collection=GetDistrict",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
 								"RestAPIMongoDBAll"
 							],
 							"query": [
 								{
 									"key": "Database",
-									"value": "aws"
+									"value": "nodeMongo"
 								},
 								{
 									"key": "Collection",
-									"value": "city"
+									"value": "GetDistrict"
 								}
 							]
 						}
@@ -985,18 +994,17 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPIMongoDBAll?Database=my_db&Collection=customers",
+					"name": "http://localhost:8686/RestAPIMongoDBAll?Database=my_db&Collection=customers",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "http://localhost:8080/RestAPIMongoDBAll?Database=my_db&Collection=customers",
+							"raw": "http://localhost:8686/RestAPIMongoDBAll?Database=my_db&Collection=customers",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
 								"RestAPIMongoDBAll"
 							],
@@ -1015,18 +1023,17 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=customers",
+					"name": "http://localhost:8686/RestAPIMongoDB?Database=mongoDB&Collection=customers",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "http://localhost:8080/RestAPIMongoDB?Database=mongoDB&Collection=customers&id=5cb24912a13ba207d80fc93e",
+							"raw": "http://localhost:8686/RestAPIMongoDB?Database=mongoDB&Collection=customers&id=5cb24912a13ba207d80fc93e",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
 								"RestAPIMongoDB"
 							],
@@ -1049,7 +1056,7 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:8080/RestAPIMongoDB-SearchSortLimit?Database=mongoDB&Collection=try1",
+					"name": "http://localhost:8686/RestAPIMongoDB-SearchSortLimit?Database=mongoDB&Collection=try1",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -1063,12 +1070,12 @@
 							"raw": "{\n\t\"search\" : {\n\t\t\"password\": \"password\"\n\t},\n\t\"sort\" : {\n\t\t\"username\": -1\n\t},\n\t\"limit\" : 200\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/RestAPIMongoDB-SearchSortLimit?Database=mongoDB&Collection=try1",
+							"raw": "http://localhost:8686/RestAPIMongoDB-SearchSortLimit?Database=mongoDB&Collection=try1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8080",
+							"port": "8686",
 							"path": [
 								"RestAPIMongoDB-SearchSortLimit"
 							],
@@ -1123,155 +1130,207 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "http://localhost:8686/RestAPIMongoDBAll?Database=aws&Collection=city&OutputFileType=excel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/RestAPIMongoDBAll?Database=aws&Collection=city&OutputFileType=excel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"RestAPIMongoDBAll"
+							],
+							"query": [
+								{
+									"key": "Database",
+									"value": "aws"
+								},
+								{
+									"key": "Collection",
+									"value": "city"
+								},
+								{
+									"key": "OutputFileType",
+									"value": "excel"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/RestAPIMongoDBAll?Database=aws&Collection=city&OutputFileType=csv",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/RestAPIMongoDBAll?Database=aws&Collection=city&OutputFileType=csv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"RestAPIMongoDBAll"
+							],
+							"query": [
+								{
+									"key": "Database",
+									"value": "aws"
+								},
+								{
+									"key": "Collection",
+									"value": "city"
+								},
+								{
+									"key": "OutputFileType",
+									"value": "csv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/RestAPIMongoDBAll?Database=aws&Collection=city&OutputFileType=pdf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/RestAPIMongoDBAll?Database=aws&Collection=city&OutputFileType=pdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"RestAPIMongoDBAll"
+							],
+							"query": [
+								{
+									"key": "Database",
+									"value": "aws"
+								},
+								{
+									"key": "Collection",
+									"value": "city"
+								},
+								{
+									"key": "OutputFileType",
+									"value": "pdf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/RestAPIMongoDBAll?Database=nodeMongo&Collection=GetDistrict",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 348,\n        \"DistrictName\": \"Ahmednagar\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 349,\n        \"DistrictName\": \"Akola\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 350,\n        \"DistrictName\": \"Amravati\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 351,\n        \"DistrictName\": \"Aurangabad\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 352,\n        \"DistrictName\": \"Beed\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 353,\n        \"DistrictName\": \"Bhandara\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 354,\n        \"DistrictName\": \"Buldhana\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 355,\n        \"DistrictName\": \"Chandrapur\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 356,\n        \"DistrictName\": \"Dhule\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 357,\n        \"DistrictName\": \"Gadchiroli\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 358,\n        \"DistrictName\": \"Gondia\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 359,\n        \"DistrictName\": \"Hingoli\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 360,\n        \"DistrictName\": \"Jalgaon\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 361,\n        \"DistrictName\": \"Jalna\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 362,\n        \"DistrictName\": \"Kolhapur\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 363,\n        \"DistrictName\": \"Latur\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 364,\n        \"DistrictName\": \"Mumbai City\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 365,\n        \"DistrictName\": \"Mumbai Suburban\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 366,\n        \"DistrictName\": \"Nagpur\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 367,\n        \"DistrictName\": \"Nanded\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 368,\n        \"DistrictName\": \"Nandurbar\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 369,\n        \"DistrictName\": \"Nashik\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 370,\n        \"DistrictName\": \"Osmanabad\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 371,\n        \"DistrictName\": \"Parbhani\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 372,\n        \"DistrictName\": \"Pune\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 373,\n        \"DistrictName\": \"Raigad\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 374,\n        \"DistrictName\": \"Ratnagiri\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 375,\n        \"DistrictName\": \"Sangli\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 376,\n        \"DistrictName\": \"Satara\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 377,\n        \"DistrictName\": \"Sindhudurg\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 378,\n        \"DistrictName\": \"Solapur\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 379,\n        \"DistrictName\": \"Thane\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 380,\n        \"DistrictName\": \"Wardha\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 381,\n        \"DistrictName\": \"Washim\"\n    },\n    {\n        \"StateId\": 21,\n        \"DistrictId\": 382,\n        \"DistrictName\": \"Yavatmal\"\n    }\n]"
+						},
+						"url": {
+							"raw": "http://localhost:8686/RestAPIMongoDBAll?Database=nodeMongo&Collection=GetDistrict",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"RestAPIMongoDBAll"
+							],
+							"query": [
+								{
+									"key": "Database",
+									"value": "nodeMongo"
+								},
+								{
+									"key": "Collection",
+									"value": "GetDistrict"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/RestAPIMongoDBAll?Database=aws&Collection=city&OutputFileType=html",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/RestAPIMongoDBAll?Database=aws&Collection=city&OutputFileType=html",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"RestAPIMongoDBAll"
+							],
+							"query": [
+								{
+									"key": "Database",
+									"value": "aws"
+								},
+								{
+									"key": "Collection",
+									"value": "city"
+								},
+								{
+									"key": "OutputFileType",
+									"value": "html"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
 		{
-			"name": "s3upload",
-			"description": null,
+			"name": "log file download",
 			"item": [
 				{
-					"name": "http://localhost:8686/s3ListFile",
+					"name": "http://localhost:8686/serverLogDownload",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
-						"url": "http://localhost:8686/s3ListFile"
+						"url": "http://localhost:8686/serverLogDownload"
 					},
 					"response": []
-				},
-				{
-					"name": "http://localhost:8686/s3uploadFile",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "file",
-									"description": "",
-									"type": "file"
-								}
-							]
-						},
-						"url": "http://localhost:8686/s3uploadFile"
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8686/s3DeleteFile?file=ram.sql",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {},
-						"url": {
-							"raw": "http://localhost:8686/s3DeleteFile?file=AppStorage/13.JPG",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8686",
-							"path": [
-								"s3DeleteFile"
-							],
-							"query": [
-								{
-									"key": "file",
-									"value": "AppStorage/13.JPG"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8686/listBucket",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {},
-						"url": "http://localhost:8686/listBucket"
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8686/createBucket?bucket=prem",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {},
-						"url": {
-							"raw": "http://localhost:8686/createBucket?bucket=pritam-angular1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8686",
-							"path": [
-								"createBucket"
-							],
-							"query": [
-								{
-									"key": "bucket",
-									"value": "pritam-angular1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8686/deleteBucket?bucket=pritam-angular1",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {},
-						"url": {
-							"raw": "http://localhost:8686/deleteBucket?bucket=pritam-angular1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8686",
-							"path": [
-								"deleteBucket"
-							],
-							"query": [
-								{
-									"key": "bucket",
-									"value": "pritam-angular1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8686/localuploadFile",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "file",
-									"description": "",
-									"type": "file"
-								}
-							]
-						},
-						"url": "http://localhost:8686/serverUploadFile"
-					},
-					"response": []
-				},
+				}
+			]
+		},
+		{
+			"name": "local folder",
+			"item": [
 				{
 					"name": "http://localhost:8686/serverDeleteFile?file=uploads\\1556903651374_pritam.jpg",
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "http://localhost:8686/serverDeleteFile?file=uploads\\1556903655234_Honda.mp4",
 							"protocol": "http",
@@ -1297,7 +1356,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": "http://localhost:8686/serverListFile"
 					},
 					"response": []
@@ -1307,7 +1365,10 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": "http://localhost:8686/serverCleanTrash"
 					},
 					"response": []
@@ -1317,7 +1378,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "http://localhost:8686/serverGetFile?file=uploads\\\\1556946904370_pritam.jpg",
 							"protocol": "http",
@@ -1339,11 +1399,153 @@
 					"response": []
 				},
 				{
+					"name": "http://localhost:8686/localuploadFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file"
+								}
+							]
+						},
+						"url": "http://localhost:8686/serverUploadFile"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "s3upload",
+			"item": [
+				{
+					"name": "http://localhost:8686/s3ListFile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/s3ListFile"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/s3uploadFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": "http://localhost:8686/s3uploadFile"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/s3DeleteFile?file=ram.sql",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8686/s3DeleteFile?file=AppStorage/13.JPG",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"s3DeleteFile"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "AppStorage/13.JPG"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/listBucket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/listBucket"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/createBucket?bucket=prem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/createBucket?bucket=pritam-angular1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"createBucket"
+							],
+							"query": [
+								{
+									"key": "bucket",
+									"value": "pritam-angular1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/deleteBucket?bucket=pritam-angular1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8686/deleteBucket?bucket=pritam-angular1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"deleteBucket"
+							],
+							"query": [
+								{
+									"key": "bucket",
+									"value": "pritam-angular1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "http://localhost:8686/serverGetFile?uploads\\\\1556948411306_Honda.mp4",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "http://localhost:8686/serverGetFile?file=uploads\\\\1556948411306_Honda.mp4",
 							"protocol": "http",
@@ -1369,7 +1571,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "http://localhost:8686/s3GetFile?file=AppStorage/016.JPG",
 							"protocol": "http",
@@ -1395,7 +1596,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
 							"raw": "http://localhost:8686/s3GetFile?file=1556905345675_pritam.jpg",
 							"protocol": "http",
@@ -1413,6 +1613,903 @@
 								}
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "email",
+			"item": [
+				{
+					"name": "http://localhost:8686/sendEmail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"to\": \"pritamkhose@gmail.com\",\n\t\"subject\" : \"node js mail\",\n\t\"body\" : \"these is mail body\"\n}"
+						},
+						"url": "http://localhost:8686/sendEmail"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "unipune StateDistTal",
+			"item": [
+				{
+					"name": "https://convocation.unipune.ac.in/Application/GetState",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "https://convocation.unipune.ac.in/Application/GetState"
+					},
+					"response": []
+				},
+				{
+					"name": "https://convocation.unipune.ac.in/Application/GetDistrict?StateId=21",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://convocation.unipune.ac.in/Application/GetDistrict?StateId=21",
+							"protocol": "https",
+							"host": [
+								"convocation",
+								"unipune",
+								"ac",
+								"in"
+							],
+							"path": [
+								"Application",
+								"GetDistrict"
+							],
+							"query": [
+								{
+									"key": "StateId",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://convocation.unipune.ac.in/Application/GetTaluka",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://convocation.unipune.ac.in/Application/GetTaluka?DistrictId=1",
+							"protocol": "https",
+							"host": [
+								"convocation",
+								"unipune",
+								"ac",
+								"in"
+							],
+							"path": [
+								"Application",
+								"GetTaluka"
+							],
+							"query": [
+								{
+									"key": "DistrictId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/AddressScript",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/AddressScript"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/AddressScriptTaluka",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/AddressScriptTaluka"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FCM",
+			"item": [
+				{
+					"name": "http://localhost:8686/sendFCM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \"registration_ids\":[\"c2t_QTstqa4:APA91bGld33R4c5mt4QEl4tQv-zZaDVRvIRDXHYv4gEaZYWEy0ZEZel22ObZorC96gGo6eepRMzfn7ALtm1RmPjrYaXNHhRoDskO9neap3a6to3Q-Sb6b6Ss3qGlk02iocx8EDc7IHvx\"],\r\n   \"priority\":\"high\",\r\n   \"notification\":{  \r\n      \"title\":\"Pritam Multiple Notification\",\r\n      \"body\":\"Pritam is Very Very Happy with FCM!\"\r\n   },\r\n   \"data\":{  \r\n      \"Key-1\":\"JSA Data 1\",\r\n      \"Key-2\":\"JSA Data 2\",\r\n      \"Key-3\":\"JSA Data 3\"\r\n   }\r\n}"
+						},
+						"url": "http://localhost:8686/sendFCM"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/callHttpRequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:8686/callHttpRequest"
+					},
+					"response": []
+				},
+				{
+					"name": "https://fcm.googleapis.com/fcm/send",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "key=AIzaSyCvymv0xqjJnnYQe0AMRVQdMjmryliiS4E"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \"registration_ids\":[\"f6ndL9Ekhns:APA91bGNsVLb7frQza0i7XE9OFkS0y7r04gN17mHaJWHCMlJ9CirqoAOmTyvaMDPaIcfOlp7wiHn47sdECTx2sW4y1CgXGxSwiq3oGcLli1ToGWALEUPPvy3ROptFserO8z_Hq_yl7si\"],\r\n   \"priority\":\"high\",\r\n   \"notification\":{  \r\n      \"title\":\"Pritam Multiple Notification\",\r\n      \"body\":\"Pritam is Very Very Happy with FCM!\"\r\n   },\r\n   \"data\":{  \r\n      \"Key-1\":\"JSA Data 1\",\r\n      \"Key-2\":\"JSA Data 2\",\r\n      \"Key-3\":\"JSA Data 3\"\r\n   }\r\n}"
+						},
+						"url": "https://fcm.googleapis.com/fcm/send"
+					},
+					"response": []
+				},
+				{
+					"name": "https://fcm.googleapis.com/fcm/send",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "key=AAAA-CBpE6c:APA91bEt7era5ur9lpyeKllap3qYnxnR7EULiB81q84xneudea4fLH3OF3hhfq1GiKWdR7HhVFZqTqXGvNLOYBco3IejDcJW0cVDMTDyYOFV73OWt_YuxFOnGtEbWAlGjrWgiNwQuoobGnCpM4sT43lC80n-KL5Keg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \"to\":\"deviceToken=cj629U7tt1g:APA91bFnxNpTewI6gP1lbMz0nIIoKRA8IAG7nFrE0RxnjYy9COV8rqv-wHYZ-5uh2j8TBXmcPY96Hu16faqBbTQP8g29Kai8ypxEbfqEfPBDa1UP2Pwy5qVZeU0KvkRxyWmULYXIiMGm\",\r\n   \"priority\":\"high\",\r\n   \"notification\":{  \r\n      \"title\":\"Pritam Notification\",\r\n      \"body\":\"Pritam is Happy with FCM!\"\r\n   },\r\n   \"data\":{  \r\n      \"Key-1\":\"JSA Data 1\",\r\n      \"Key-2\":\"JSA Data 2\",\r\n      \"Key-3\":\"JSA Data 3\"\r\n   }\r\n}"
+						},
+						"url": "https://fcm.googleapis.com/fcm/send"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/scheduleFCM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \"date\" : \"2019-07-06T15:06:34.486Z\",\r\n   \"registration_ids\":[\"c2t_QTstqa4:APA91bGld33R4c5mt4QEl4tQv-zZaDVRvIRDXHYv4gEaZYWEy0ZEZel22ObZorC96gGo6eepRMzfn7ALtm1RmPjrYaXNHhRoDskO9neap3a6to3Q-Sb6b6Ss3qGlk02iocx8EDc7IHvx\"],\r\n   \"priority\":\"high\",\r\n   \"notification\":{  \r\n      \"title\":\"Pritam Multiple Notification\",\r\n      \"body\":\"Pritam is Very Very Happy with FCM!\"\r\n   },\r\n   \"data\":{  \r\n      \"Key-1\":\"JSA Data 1\",\r\n      \"Key-2\":\"JSA Data 2\",\r\n      \"Key-3\":\"JSA Data 3\"\r\n   }\r\n}"
+						},
+						"url": "http://localhost:8686/scheduleFCM"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/scheduleFCMtask",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/scheduleFCMtask"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "excel to json",
+			"item": [
+				{
+					"name": "http://localhost:8686/excelUploadFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": "http://localhost:8686/excelUploadFile"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chating",
+			"item": [
+				{
+					"name": "http://localhost:8686/chat.html",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/chat.html"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/chatmessages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/chatmessages"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/chatmessages",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Postman",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "request",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8686/chatmessages"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "firebse database",
+			"item": [
+				{
+					"name": "http://localhost:8686/firebsedatabase?document=users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/firebsedatabase?document=restricted_access/secret_document/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"firebsedatabase"
+							],
+							"query": [
+								{
+									"key": "document",
+									"value": "restricted_access/secret_document/user"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/firebsedatabase?document=users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"alanisawesome\": {\n        \"date_of_birth\": \"June 01, 2019\",\n        \"full_name\": \"Ram Turing\",\n        \"pin\": 414104\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8686/firebsedatabase?document=restricted_access/secret_document/users45",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"firebsedatabase"
+							],
+							"query": [
+								{
+									"key": "document",
+									"value": "restricted_access/secret_document/users45"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://angularweb-d8624.firebaseio.com/restricted_access/secret_document/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://nodefirebase-7ae73.firebaseio.com/restricted_access/secret_document/user.json"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/firebsedatabase?document=restricted_access",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/firebsedatabase?document=restricted_access",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"firebsedatabase"
+							],
+							"query": [
+								{
+									"key": "document",
+									"value": "restricted_access"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/firebsedatabase?document=restricted_access/secret_document/users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/firebsedatabase?document=restricted_access/secret_document/users46",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"firebsedatabase"
+							],
+							"query": [
+								{
+									"key": "document",
+									"value": "restricted_access/secret_document/users46"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "scheduler",
+			"item": [
+				{
+					"name": "http://localhost:8686/scheduler",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/scheduler"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/scheduler",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8686/scheduler"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/scheduler",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8686/scheduler"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gdrive",
+			"item": [
+				{
+					"name": "https://www.googleapis.com/drive/v3/files?key=AIzaSyAH4-AbNN11ZzJgJpZ1y8ZYyA_uRObMZMM",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.googleapis.com/drive/v3/files?key=AIzaSyAH4-AbNN11ZzJgJpZ1y8ZYyA_uRObMZMM",
+							"protocol": "https",
+							"host": [
+								"www",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"drive",
+								"v3",
+								"files"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "AIzaSyAH4-AbNN11ZzJgJpZ1y8ZYyA_uRObMZMM"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dropBox",
+			"item": [
+				{
+					"name": "http://localhost:8686/dropboxListFiles?folder=NodeFolder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/dropboxListFiles?folder=NodeFolder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"dropboxListFiles"
+							],
+							"query": [
+								{
+									"key": "folder",
+									"value": "NodeFolder"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/dropboxListFiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/dropboxListFiles"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/dropboxDownload?fileName=uploadtry.xlsx",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/dropboxDownload?fileName=/nodefolder/excel.xlsx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"dropboxDownload"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "/nodefolder/excel.xlsx"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/dropboxDownload?fileName=nodefolder/excel.xlsx",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/dropboxDownload?fileName=nodefolder/excel.xlsx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"dropboxDownload"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "nodefolder/excel.xlsx"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/dropboxUpload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/E:/Code/Java/NodeJS/AWS/awsnode/extra/node log.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8686/dropboxUpload?folder=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"dropboxUpload"
+							],
+							"query": [
+								{
+									"key": "folder",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/dropboxDelete?fileName=1561206308967_node log.txt",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/dropboxDelete?fileName=upload1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"dropboxDelete"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "upload1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/dropboxFileInfo?fileName=uploadtry.xlsx",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/dropboxFileInfo?fileName=uploadtry.xlsx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"dropboxFileInfo"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "uploadtry.xlsx"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://api.dropboxapi.com/2/files/get_metadata",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer MdSimovNs_AAAAAAAAAACljVzrckuFqD_xL8R96epXjHjWA8bZkJoHxZkQnkC_60",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"path\": \"/uploadtry.xlsx\",\r\n    \"include_media_info\": true,\r\n    \"include_deleted\": true,\r\n    \"include_has_explicit_shared_members\": true\r\n}"
+						},
+						"url": "https://api.dropboxapi.com/2/files/get_metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "https://api.dropboxapi.com/2/file_properties/properties/search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer MdSimovNs_AAAAAAAAAACljVzrckuFqD_xL8R96epXjHjWA8bZkJoHxZkQnkC_60",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"queries\": [\r\n        {\r\n            \"query\": \"Confidential\",\r\n            \"mode\": {\r\n                \".tag\": \"field_name\",\r\n                \"field_name\": \"Security\"\r\n            },\r\n            \"logical_operator\": \"or_operator\"\r\n        }\r\n    ],\r\n    \"template_filter\": \"filter_none\"\r\n}"
+						},
+						"url": "https://api.dropboxapi.com/2/file_properties/properties/search"
+					},
+					"response": []
+				},
+				{
+					"name": "https://content.dropboxapi.com/2/files/download",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer MdSimovNs_AAAAAAAAAAcnOJDVzlTuTS-NLOv6ColtebxoczYFAqe0oI_oCh3oa1",
+								"type": "text"
+							},
+							{
+								"key": "Dropbox-API-Arg",
+								"value": "{\"path\": \"/nodefolder/excel.xlsx\"}",
+								"type": "text"
+							}
+						],
+						"url": "https://content.dropboxapi.com/2/files/download"
+					},
+					"response": []
+				},
+				{
+					"name": "https://content.dropboxapi.com/2/files/upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/octet-stream",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer MdSimovNs_AAAAAAAAAACljVzrckuFqD_xL8R96epXjHjWA8bZkJoHxZkQnkC_60",
+								"type": "text"
+							},
+							{
+								"key": "Dropbox-API-Arg",
+								"value": "{\"path\": \"/\",\"mode\": \"overwrite\",\"autorename\": true,\"mute\": false}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/C:/Users/Pritam/Downloads/pritam.jpg"
+							}
+						},
+						"url": "https://content.dropboxapi.com/2/files/upload"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "oauth",
+			"item": [
+				{
+					"name": "http://localhost:8686/oauth/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 31157da7dfa0e6cee6a7b5fe18857f95785c2bc4",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8686/oauth/"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/oauth/token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "topSecret",
+								"username": "confidentialApplication"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "pritam",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8686/oauth/token"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/oauth/token refresh_token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "secret",
+								"username": "application"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "cbf1d681769e6719d1dcc620e32d31c9506728ab",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8686/oauth/token"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/oauth/logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "http://localhost:8686/oauth/logout"
 					},
 					"response": []
 				}

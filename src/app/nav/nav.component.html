@@ -28,31 +28,38 @@
         <a class="nav-link" routerLink="/products" routerLinkActive="active"><span class="fas fa-th"></span> &nbsp;&nbsp;
           Products</a>
       </li>
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/notifications" routerLinkActive="active"><span class="fas fa-envelope"></span>
-          &nbsp;&nbsp; Notification</a>
+
+      <li class="dropdown mydropdown">
+        <a class="dropdown-toggle colorwhite" style="color: white;"data-toggle="dropdown"><span class="fas fa-th"></span> &nbsp;&nbsp;Service</a>
+        <ul class="dropdown-menu">
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" routerLink="/notifications" routerLinkActive="active"><span class="fas fa-envelope"></span>
+              &nbsp;&nbsp; Notification</a>
+          </li>
+
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" routerLink="/users" routerLinkActive="active"><span class="fas fa-user"></span> &nbsp;&nbsp;
+              Users</a>
+          </li>
+
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" routerLink="/orders" routerLinkActive="active"><span class="fas fa-tags"></span> &nbsp;&nbsp;
+              My Orders</a>
+          </li>
+
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" routerLink="/reports" routerLinkActive="active"><span class="fas fa-signal"></span>
+              &nbsp;&nbsp; Reports</a>
+          </li>
+
+
+          <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" routerLink="/customers" routerLinkActive="active"><span class="fas fa-book"></span>
+              &nbsp;&nbsp; Customers</a>
+          </li>
+        </ul>
       </li>
 
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/users" routerLinkActive="active"><span class="fas fa-user"></span> &nbsp;&nbsp;
-          Users</a>
-      </li>
-
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/orders" routerLinkActive="active"><span class="fas fa-tags"></span> &nbsp;&nbsp;
-          My Orders</a>
-      </li>
-
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/reports" routerLinkActive="active"><span class="fas fa-signal"></span>
-          &nbsp;&nbsp; Reports</a>
-      </li>
-
-
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/customers" routerLinkActive="active"><span class="fas fa-book"></span>
-          &nbsp;&nbsp; Customers</a>
-      </li>
 
       <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link" routerLink="/dropbox" routerLinkActive="active"><span class="fas fa-folder"></span>
