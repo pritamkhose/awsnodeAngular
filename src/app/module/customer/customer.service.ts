@@ -28,27 +28,27 @@ export class CustomerService {
   private aBaseUrl = environment.aBaseUrl;
 
   public getCustomereList() {
-    console.log('get List --> ' + this.aBaseUrl + 'customers');
+    // console.log('get List --> ' + this.aBaseUrl + 'customers');
     return this.http.get(this.aBaseUrl + 'customers');
   }
 
   public getCustomerByID(id: string ){
-    console.log('get Obj --> ' + this.aBaseUrl + 'customer?email=' + id);
+    // console.log('get Obj --> ' + this.aBaseUrl + 'customer?email=' + id);
     return this.http.get(this.aBaseUrl + 'customer?email=' + id);
   }
 
    public createCustomer(data) {
-    console.log(data);
+    // console.log(data);
     return this.http.post(this.aBaseUrl + 'customer', JSON.stringify(data) , httpOptions);
   }
 
    public updateCustomer(id: string, data) {
-    console.log(data);
+    // console.log(data);
     return this.http.put(this.aBaseUrl+ 'customer?email=' + id, JSON.stringify(data) , httpOptions);
   }
 
   public deleteCustomer(id: string ){
-    console.log('delete Obj --> ' + this.aBaseUrl + 'customer?email=' + id);
+    // console.log('delete Obj --> ' + this.aBaseUrl + 'customer?email=' + id);
     return this.http.delete(this.aBaseUrl + 'customer?email=' + id);
   }
 

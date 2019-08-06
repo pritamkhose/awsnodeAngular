@@ -21,8 +21,12 @@ import { UsersComponent } from './module/users/users.component';
 import { OrdersComponent } from './module/orders/orders.component';
 import { ProductEditComponent } from './module/product/product-edit/product-edit.component';
 import { UserEditComponent } from './module/users/user-edit/user-edit.component';
-import { LoginComponent } from './module/login/login.component';
 import { ReportsComponent } from './module/reports/reports.component';
+
+import { LoginComponent } from './module/login/login.component';
+import { PasswordforgotComponent } from './module/login/passwordforgot/passwordforgot.component';
+import { PasswordresetcodeComponent } from './module/login/passwordresetcode/passwordresetcode.component';
+import { SignupComponent } from './module/login/signup/signup.component';
 
 import { CustomerComponent } from './module/customer/customer.component';
 import { CustomerEditComponent } from './module/customer/customer-edit/customer-edit.component';
@@ -36,8 +40,8 @@ import { CustomerService } from './module/customer/customer.service';
 import { OrderService } from './module/orders/order.service';
 import { UploadFileService } from './module/orders/upload-file.service';
 import { FcmService } from './module/notification/fcm.service';
-
-
+import { LoginService } from './module/login/login.service';
+import { LocalStorageService } from './module/login/local-storage.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +58,10 @@ import { FcmService } from './module/notification/fcm.service';
     UserEditComponent,
     LoginComponent,
     ReportsComponent,
-    DropboxComponent
+    DropboxComponent,
+    PasswordforgotComponent,
+    PasswordresetcodeComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +80,9 @@ import { FcmService } from './module/notification/fcm.service';
     OrderService,
     UploadFileService,
     FcmService,
-    DropboxService
+    DropboxService,
+    LoginService,
+    LocalStorageService
   ],
   bootstrap: [AppComponent]
 })

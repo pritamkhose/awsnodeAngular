@@ -1,14 +1,83 @@
 <div class="auth-form-body mt-3">
-	      <label for="login_field">
-          Username or email address
-        </label>
-        <input type="text" name="login" id="login_field" class="form-control input-block" tabindex="1" autocapitalize="off" autocorrect="off" autofocus="autofocus">
+  <!-- <label for="login_field">
+    Email address
+  </label>
+  <input type="text" name="login" id="login_field" class="form-control input-block" tabindex="1" autocapitalize="off"
+    autocorrect="off" autofocus="autofocus">
+  <br />
+  <label for="password">
+    Password
+  </label>
+  <input type="password" name="password" id="password" class="form-control form-control input-block" tabindex="2">
+  <br />
 
-        <label for="password">
-          Password <a class="label-link" href="/password_reset">Forgot password?</a>
-        </label>
-        <input type="password" name="password" id="password" class="form-control form-control input-block" tabindex="2">
-        <input type="hidden" class="js-webauthn-support" name="webauthn-support" value="supported">
-        <br/>
-        <input type="submit" name="commit" value="Sign in" tabindex="3" class="btn btn-primary btn-block" data-disable-with="Signing in…">
+  <input type="hidden" class="js-webauthn-support" name="webauthn-support" value="supported">
+  -->
+
+  <form class="example-form" [formGroup]="boardsForm" (ngSubmit)="onFormSubmit(boardsForm.value)">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Email" formControlName="email" [errorStateMatcher]="matcher" />
+      <mat-error>
+        <span *ngIf="
+            !boardsForm.get('email').valid && boardsForm.get('email').touched
+          ">Please enter email</span>
+      </mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width">
+      <input matInput type="password" placeholder="Password" formControlName="password" [errorStateMatcher]="matcher" />
+      <mat-error>
+        <span *ngIf="!boardsForm.get('password').valid && boardsForm.get('password').touched">Please enter password</span>
+      </mat-error>
+    </mat-form-field>
+    <p style="text-align: center; color: red;">{{message | uppercase}}</p>
+    <br />
+    <input type="submit" [disabled]="!boardsForm.valid" name="signin" value="Login" tabindex="3" class="btn btn-primary btn-block"
+    data-disable-with="Signing in…">
+  </form>
+  <br />
+  <input type="submit" routerLink="/signup" name="signup" value="Register" tabindex="3" class="btn btn-info btn-block"
+    data-disable-with="Please wait…"> <br />
+  <input type="submit" *ngIf="message.length > 2" routerLink="/passwordforgot" name="forgotpassword" value="Forgot Password" tabindex="3"
+    class="btn btn-info btn-block" data-disable-with="Please wait…">
 </div>
+
+<!-- <div class="auth-form-body mt-3">
+  <label for="login_field">
+    Email address
+  </label>
+  <input type="text" name="login" id="login_field" class="form-control input-block" tabindex="1" autocapitalize="off"
+    autocorrect="off" autofocus="autofocus">
+  <br />
+  <label for="username">
+    User Name
+  </label>
+  <input type="text" name="username" id="username" class="form-control form-control input-block" tabindex="2">
+  <br />
+  <label for="password">
+    Password
+  </label>
+  <input type="password" name="password" id="password" class="form-control form-control input-block" tabindex="2">
+  <br />
+  <label for="repeatpassword">
+    Repeat Password
+  </label>
+  <input type="password" name="repeatpassword" id="repeatpassword" class="form-control form-control input-block" tabindex="2">
+  <br />
+  <label for="resetcode">
+    Reset Code
+  </label>
+  <input type="number"  name="submitpasscode" id="submitpasscode" class="form-control form-control input-block" tabindex="2">
+  <br />
+  <input type="hidden" class="js-webauthn-support" name="webauthn-support" value="supported">
+  <input type="submit" routerLink="/login" name="signin" value="Login" tabindex="3" class="btn btn-primary btn-block"
+    data-disable-with="Signing in…">
+  <input type="submit" routerLink="/signup" name="signup" value="Register" tabindex="3" class="btn btn-primary btn-block"
+    data-disable-with="Please wait…">
+  <input type="submit" routerLink="/passwordforgot" name="forgotpassword" value="Forgot Password" tabindex="3" class="btn btn-primary btn-block"
+    data-disable-with="Please wait…">
+  <input type="submit" routerLink="/passwordresetcode"  name="submit" value="Reset Code" tabindex="3" class="btn btn-primary btn-block"
+    data-disable-with="Please wait…">
+  <input type="submit" (click)="submit()"  name="submit" value="Submit" tabindex="3" class="btn btn-primary btn-block"
+    data-disable-with="Please wait…">
+</div> -->

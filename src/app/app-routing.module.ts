@@ -9,8 +9,13 @@ import { UsersComponent } from './module/users/users.component';
 import { OrdersComponent } from './module/orders/orders.component';
 import { ProductEditComponent } from './module/product/product-edit/product-edit.component';
 import { UserEditComponent } from './module/users/user-edit/user-edit.component';
-import { LoginComponent } from './module/login/login.component';
 import { ReportsComponent } from './module/reports/reports.component';
+
+import { LoginComponent } from './module/login/login.component';
+import { PasswordforgotComponent } from './module/login/passwordforgot/passwordforgot.component';
+import { PasswordresetcodeComponent } from './module/login/passwordresetcode/passwordresetcode.component';
+import { SignupComponent } from './module/login/signup/signup.component';
+
 
 import { CustomerComponent } from './module/customer/customer.component';
 import { CustomerEditComponent } from './module/customer/customer-edit/customer-edit.component';
@@ -29,8 +34,12 @@ const routes: Routes = [
   { path: 'user', component: UserEditComponent },
   { path: 'notifications', component: NotificationComponent },
   { path: 'orders', component: OrdersComponent },
-  { path: 'login', component: LoginComponent },
   { path: 'reports', component: ReportsComponent },
+
+  { path: 'login', component: LoginComponent },
+  { path: 'passwordforgot', component: PasswordforgotComponent },
+  { path: 'passwordresetcode', component: PasswordresetcodeComponent },
+  { path: 'signup', component: SignupComponent },
 
   { path: 'customers', component: CustomerComponent },
   { path: 'customer/:id', component: CustomerEditComponent },
