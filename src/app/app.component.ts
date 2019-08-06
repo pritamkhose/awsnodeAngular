@@ -46,7 +46,7 @@ export class AppComponent {
         console.log('you are offline');
         this.isConnected = false;
       }
-    console.log(isOnline);
+    // console.log(isOnline);
     });
   }
 }

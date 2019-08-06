@@ -38,7 +38,8 @@
   <br />
   <input type="submit" routerLink="/signup" name="signup" value="Register" tabindex="3" class="btn btn-info btn-block"
     data-disable-with="Please wait…"> <br />
-  <input type="submit" *ngIf="message.length > 2" routerLink="/passwordforgot" name="forgotpassword" value="Forgot Password" tabindex="3"
+    <!-- *ngIf="message.length > 2"  -->
+  <input type="submit" routerLink="/passwordforgot" name="forgotpassword" value="Forgot Password" tabindex="3"
     class="btn btn-info btn-block" data-disable-with="Please wait…">
 </div>
 

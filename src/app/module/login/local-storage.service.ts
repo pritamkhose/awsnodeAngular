@@ -7,9 +7,9 @@ import { LocalStorage, SharedStorage } from 'ngx-store';
 })
 export class LocalStorageService  {
   @LocalStorage() aList = new Object();
-  @LocalStorage() username: string = null;
-  @LocalStorage() email: string = null;
-  @LocalStorage() token: string = null;
+  @LocalStorage() username;
+  @LocalStorage() email;
+  @LocalStorage() token;
 
   constructor() {
   }

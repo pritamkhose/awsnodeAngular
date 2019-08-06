@@ -2514,6 +2514,399 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "htmljsdom",
+			"item": [
+				{
+					"name": "rediff money",
+					"item": [
+						{
+							"name": "https://money.rediff.com/companies/Tata-Motors-Ltd",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "https://money.rediff.com/companies/Tata-Motors-Ltd"
+							},
+							"response": []
+						},
+						{
+							"name": "https://money.rediff.com/money1/currentstatus.php?companycode=10510008",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://money.rediff.com/money1/currentstatus.php?companycode=10510008",
+									"protocol": "https",
+									"host": [
+										"money",
+										"rediff",
+										"com"
+									],
+									"path": [
+										"money1",
+										"currentstatus.php"
+									],
+									"query": [
+										{
+											"key": "companycode",
+											"value": "10510008"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://money.rediff.com/money1/chart_compPage.php?companyCode=10510008&mode=day&exchange=bse&output=csv",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://money.rediff.com/money1/chart_compPage.php?companyCode=10510008&mode=day&exchange=bse&output=csv",
+									"protocol": "https",
+									"host": [
+										"money",
+										"rediff",
+										"com"
+									],
+									"path": [
+										"money1",
+										"chart_compPage.php"
+									],
+									"query": [
+										{
+											"key": "companyCode",
+											"value": "10510008"
+										},
+										{
+											"key": "mode",
+											"value": "day"
+										},
+										{
+											"key": "exchange",
+											"value": "bse"
+										},
+										{
+											"key": "output",
+											"value": "csv"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://money.rediff.com/money1/chart_compPage.php?companyCode=10510008&mode=6month&exchange=bse&output=csv",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://money.rediff.com/money1/chart_compPage.php?companyCode=10510008&mode=6month&exchange=bse&output=csv",
+									"protocol": "https",
+									"host": [
+										"money",
+										"rediff",
+										"com"
+									],
+									"path": [
+										"money1",
+										"chart_compPage.php"
+									],
+									"query": [
+										{
+											"key": "companyCode",
+											"value": "10510008"
+										},
+										{
+											"key": "mode",
+											"value": "6month"
+										},
+										{
+											"key": "exchange",
+											"value": "bse"
+										},
+										{
+											"key": "output",
+											"value": "csv"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "http://localhost:8686/htmljsdom-rediff",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/htmljsdom-rediff"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/htmljsdom-rediff?url=https://money.rediff.com/indices/bse/bse200/101-200",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/htmljsdom-rediff?url=https://money.rediff.com/indices/bse/bse200/101-200",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"htmljsdom-rediff"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://money.rediff.com/indices/bse/bse200/101-200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/htmljsdom-rest?url=https://www.github.com/pritamkhose",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/htmljsdom-rest?url=https://www.github.com/pritamkhose",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"htmljsdom-rest"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://www.github.com/pritamkhose"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/htmljsdom-helloworld",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/htmljsdom-helloworld"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/htmljsdom-rediff?url=https://money.rediff.com/gainers/bse/daily/groupa?src=gain_lose",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/htmljsdom-rediff?url=https://money.rediff.com/gainers/bse/daily/groupa?src=gain_lose",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"htmljsdom-rediff"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://money.rediff.com/gainers/bse/daily/groupa?src=gain_lose"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/htmljsdom-rediff?url=https://money.rediff.com/losers/nse/monthly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/htmljsdom-rediff?url=https://money.rediff.com/losers/nse/monthly",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"htmljsdom-rediff"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "https://money.rediff.com/losers/nse/monthly"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/htmljsdom-rediff?url=losers/nse/monthly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/htmljsdom-rediff?url=losers/nse/monthly",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"htmljsdom-rediff"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "losers/nse/monthly"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jwt auth",
+			"item": [
+				{
+					"name": "http://localhost:8686/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8686/users"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/users/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \t\"username\":\"priya\",\r\n    \"email\":\"priya@gmail.com\",\r\n    \"password\":\"priya\"\r\n}"
+						},
+						"url": "http://localhost:8686/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/users/forgotPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \t\"username\":\"priya\",\r\n    \"email\":\"priya@gmail.com\"\r\n}"
+						},
+						"url": "http://localhost:8686/users/forgotPassword"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/users/setNewPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n   \t\"username\": \"priya\",\r\n    \"email\": \"priya@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"resetcode\": 454381\r\n}"
+						},
+						"url": "http://localhost:8686/users/setNewPassword"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/users/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"email\": \"priya@gmail.com\",\r\n    \"password\": \"priya\"\r\n}"
+						},
+						"url": "http://localhost:8686/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8686/users/current",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InByaXlhQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoicHJpeWEiLCJpZCI6IjVkNDY3NWFlMmRkYTI5MzY1OGI3MmRlYyIsImV4cCI6MTU3MDA4MzI5MSwiaWF0IjoxNTY0ODk5MjkxfQ.SOzF2JLVN1RSprnSXSQocB_CP3y-XuRRkN0mYsitMHE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:8686/users/current"
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

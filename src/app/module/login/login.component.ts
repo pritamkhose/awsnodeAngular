@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
         .setLogin(form)
         .subscribe(
           (data : any) => {
-            console.log(JSON.stringify(data));
+            // console.log(JSON.stringify(data));
             if(data.error != null){
               this.message = data.error;
               this.aLocalStorageService.clearLogin();

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import { LocalStorageService } from './local-storage.service';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -12,7 +13,9 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class LoginService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+              private aLocalStorageService: LocalStorageService
+  ) {}
 
   public setLogin(data) {
     return this.http.post(
@@ -30,7 +33,7 @@ export class LoginService {
     );
   }
 
-  public forgotPassword(data) {
+  public setForgotPassword(data) {
     return this.http.post(
       environment.aBaseUrl + 'users/forgotPassword',
       JSON.stringify(data),
@@ -46,23 +49,27 @@ export class LoginService {
     );
   }
 
-  public getUserInfo(data) {
-    let token = '';
+  public getUserInfo() {
+    let token = this.aLocalStorageService.getToken();
+    if (token != undefined && token != null && token.trim().length > 1) {
 
-    const headerDict = {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      Authorization: 'Token ' + token
-    };
+      const headerDict = {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        Authorization: 'Token ' + token
+      };
 
-    const requestOptions = {
-      // headers: new Headers(headerDict),
-      headers: new HttpHeaders(headerDict)
-    };
-    return this.http.get(
-      environment.aBaseUrl + 'users/current',
-      requestOptions
-    );
+      const requestOptions = {
+        // headers: new Headers(headerDict),
+        headers: new HttpHeaders(headerDict)
+      };
+      return this.http.get(
+        environment.aBaseUrl + 'users/current',
+        requestOptions
+      );
+    } else {
+      return null;
+    }
   }
 }
