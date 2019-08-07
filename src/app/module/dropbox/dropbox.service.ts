@@ -30,7 +30,7 @@ export class DropboxService {
   public uploadFile(file: File, folderName): Observable<HttpEvent<{}>> {
     const formdata: FormData = new FormData();
     formdata.append('file', file);
-    console.log(this.aBaseUrl + 'dropboxUpload?folder=' + folderName);
+    // console.log(this.aBaseUrl + 'dropboxUpload?folder=' + folderName);
     const req = new HttpRequest('POST', this.aBaseUrl + 'dropboxUpload?folder=' + folderName , formdata, {
       reportProgress: true,
       responseType: 'json'

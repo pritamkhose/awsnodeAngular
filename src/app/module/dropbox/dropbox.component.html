@@ -13,7 +13,7 @@
   <label class="btn btn-default">
     <input type="file" (change)="selectFile($event)" />
   </label>
-  <button style="margin-left:20px; margin-bottom:10px;" class="btn btn-primary" [disabled]="!selectedFiles"
+  <button style="margin-left:20px; margin-bottom:10px;" class="btn btn-primary" [disabled]="!isUploading"
     (click)="upload()">
     Upload
   </button>
