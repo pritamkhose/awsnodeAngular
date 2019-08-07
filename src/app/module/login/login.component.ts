@@ -56,6 +56,7 @@ export class LoginComponent implements OnInit {
               this.message = data.error;
               this.aLocalStorageService.clearLogin();
             } else {
+              this.aLocalStorageService.emitChange(data.username);
               this.aLocalStorageService.setLogin(data.username, data.email, data.token);
               this.router.navigate(['/home/']);
             }
