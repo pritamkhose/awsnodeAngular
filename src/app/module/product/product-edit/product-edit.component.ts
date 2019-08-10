@@ -33,13 +33,6 @@ export class ProductEditComponent implements OnInit {
   ) { }
 
   productForm: FormGroup;
-  _id = '';
-  name = '';
-  brand = '';
-  price;
-  discount;
-  description;
-  image;
 
   aObj: any;
   matcher = new MyErrorStateMatcher();
@@ -51,8 +44,8 @@ export class ProductEditComponent implements OnInit {
       name: [null, Validators.required],
       brand: [null, Validators.required],
       price: [null, Validators.required],
-      // discount: [null, Validators.nullValidator],
-       discount: (this.aObj.discount !== undefined) ? this.aObj.discount : null,
+      discount: [null],
+      //  discount: (this.aObj.discount !== undefined) ? this.aObj.discount : null,
       description: [null, Validators.required],
       // specifications:[null, Validators.nullValidator],
       image: [null, Validators.required],
@@ -61,46 +54,54 @@ export class ProductEditComponent implements OnInit {
 
     if (this.router.snapshot.url.length === 2) {
       this.isSaved = true;
-      this.getData(this.router.snapshot.url[1].path);
+      if (this.aService.aSendObj != null) {
+        this.aObj = this.aService.aSendObj;
+        this.setData();
+      } else {
+        this.getData(this.router.snapshot.url[1].path);
+      }
     }
   }
 
   updateTotalPrice() {
-    if (this.price !== undefined) {
-      let d = this.discount;
+    const price = this.productForm.get('price').value;
+    if (price !== undefined) {
+      let d = this.productForm.get('discount').value;
       if (d === undefined) {
         d = 0;
       }
-      this.totalPrice = this.price - d;
+      this.totalPrice = price - d;
       if (this.totalPrice < 0) {
         alert('Invalid discount');
-        this.discount = 0;
+        this.productForm.get('discount').setValue(0);
         this.updateTotalPrice();
       }
     } else {
       this.totalPrice = 0;
     }
-
   }
 
   getData(id: string) {
     this.aService.getDataByID(id).subscribe(data => {
       this.aObj = data[0];
-      // console.log(this.aObj);
-      this.productForm.setValue({
-        name: this.aObj.name,
-        brand: this.aObj.brand,
-        description: this.aObj.description,
-        price: this.aObj.price,
-        discount: this.aObj.discount,
-        image: this.aObj.image
-      });
+      this.setData();
     },
       err => {
         alert('Invalid Data Found!');
         this.directrouter.navigate(['/products']);
       }
     );
+  }
+
+  setData() {
+    this.productForm.setValue({
+      name: this.aObj.name,
+      brand: this.aObj.brand,
+      description: this.aObj.description,
+      price: (this.aObj.price !== undefined) ? this.aObj.price : 0,
+      discount: (this.aObj.discount !== undefined) ? this.aObj.discount : 0 ,
+      image: this.aObj.image
+    });
   }
 
   list() {
@@ -117,7 +118,8 @@ export class ProductEditComponent implements OnInit {
       .deleteData(this.aObj._id)
       .subscribe(
         res => {
-          console.log('Deleted Suceefully --> ' + JSON.stringify(res));
+          // console.log('Deleted Suceefully --> ' + JSON.stringify(res));
+          this.list();
         },
         err => {
           console.error(JSON.stringify(err));
@@ -148,12 +150,11 @@ export class ProductEditComponent implements OnInit {
             this.isSaved = false;
             // this.directrouter.navigate(['/product/', res.insertedIds[0]]);
             const cID = res['insertedIds'][0];
-            console.log(cID);
             this.directrouter.navigate(['/product/', cID]);
           },
           err => {
             if (err.status === 500) {
-              alert('Duplicate Data Entry, Please provide new email');
+              alert('Duplicate Data Entry, Please provide new again');
             } else {
               console.error(JSON.stringify(err));
               alert('Something Went wrong!');

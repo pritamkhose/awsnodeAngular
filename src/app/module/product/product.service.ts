@@ -24,6 +24,7 @@ const httpOptions = {
 @Injectable()
 export class ProductService {
 
+  public aSendObj: any;
   private para;
 
   constructor(private http: HttpClient) {

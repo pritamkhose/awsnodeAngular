@@ -18,8 +18,8 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.aList = [];
     this.aService.getDataList()
-      .subscribe((data: Object) => {
-        console.log(data);
+      .subscribe((data) => {
+        // console.log(data);
         this.aList = data;
       });
   }
@@ -33,6 +33,7 @@ export class ProductComponent implements OnInit {
   }
 
   OnClickEvent(aObj: Product, index: number) {
+    this.aService.aSendObj = aObj;
     this.router.navigate(['/product/', aObj._id]);
   }
 
