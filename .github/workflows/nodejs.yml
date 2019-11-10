@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -24,3 +24,6 @@ jobs:
         npm test
       env:
         CI: true
+    - name: GitHub Pages Deploy
+      uses: maxheld83/ghpages@v0.1.2
+
